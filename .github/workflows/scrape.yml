@@ -3,10 +3,10 @@ name: Scrape car offers
 on:
   schedule:
     - cron: '*/15 * * * *'
-  workflow_dispatch:   # pozwala też odpalić ręcznie z zakładki Actions
+  workflow_dispatch:
 
 permissions:
-  contents: write       # żeby workflow mógł zapushować state.json z powrotem do repo
+  contents: write
 
 jobs:
   scrape:
@@ -24,6 +24,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run parser
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python main.py --urls-file urls.txt
 
       - name: Commit and push state.json
