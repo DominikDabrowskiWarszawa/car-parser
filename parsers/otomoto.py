@@ -34,7 +34,7 @@ from __future__ import annotations
 
 import json
 import re
-from urllib.parse import urlparse
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
 
@@ -70,6 +70,11 @@ _KNOWN_MULTI_WORD_BRAND_SLUGS = {
     "mercedes-benz", "land-rover", "alfa-romeo", "aston-martin", "rolls-royce",
 }
 _MAX_MODEL_SEGMENTS = 2
+
+# "68 ogłoszeń" / "19 826 ogłoszeń" - deklarowana przez stronę łączna liczba
+# wyników, używana WYŁĄCZNIE do diagnostyki/logowania (porównanie z
+# faktycznie zebraną liczbą ofert), nie do sterowania pętlą paginacji.
+_TOTAL_COUNT_RE = re.compile(r"([\d\s\u00A0]+)\s*ogłoszeń", re.IGNORECASE)
 
 
 def _known_brand_slugs_from_search_url(url: str) -> set[str]:
@@ -140,6 +145,37 @@ class OtomotoParser(SiteParser):
         path = urlparse(url).path.rstrip("/")
         # pojedyncza oferta zawsze ma w ścieżce "/oferta/" i kończy się na -ID....html
         return "/oferta/" not in path
+
+    def get_next_page_url(self, html: str, url: str) -> str | None:
+        """
+        Zamiast szukać linku "Następna" w HTML-u (patrz uzasadnienie w
+        base.py - dopasowanie tekstu bywa kruche i nigdy nie zostało
+        zweryfikowane na żywym markupie otomoto), BUDUJEMY URL kolejnej
+        strony bezpośrednio: otomoto koduje numer strony jako parametr
+        query `page` (potwierdzone np. na /twoje-obserwowane-wyszukiwania?page=2),
+        więc wystarczy go odczytać i zinkrementować - reszta parametrów
+        (marka, filtry) zostaje bez zmian.
+
+        Nie sprawdzamy tu, czy "kolejna strona istnieje" - main.py i tak
+        zatrzymuje pętlę, gdy strona nie zwraca już żadnych ofert.
+        """
+        parsed = urlparse(url)
+        query_pairs = [(k, v) for k, v in parse_qsl(parsed.query, keep_blank_values=True) if k != "page"]
+
+        current_page_values = [v for k, v in parse_qsl(parsed.query) if k == "page"]
+        current_page = int(current_page_values[0]) if current_page_values else 1
+
+        query_pairs.append(("page", str(current_page + 1)))
+        new_query = urlencode(query_pairs)
+        return urlunparse(parsed._replace(query=new_query))
+
+    def extract_total_count(self, html: str) -> int | None:
+        """Czyta deklarowaną przez stronę liczbę wyników ('X ogłoszeń') - do diagnostyki w logach."""
+        match = _TOTAL_COUNT_RE.search(html)
+        if not match:
+            return None
+        digits = re.sub(r"[^\d]", "", match.group(1))
+        return int(digits) if digits else None
 
     # ------------------------------------------------------------------ #
     # LISTING (np. /osobowe/nowe/toyota/rav4, /osobowe/audi--bmw--lexus--mercedes-benz/od-2023)
