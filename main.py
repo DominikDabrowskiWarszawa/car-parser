@@ -25,6 +25,7 @@ import argparse
 import json
 import logging
 import sys
+import time
 from pathlib import Path
 
 from parsers.registry import NoParserFoundError, get_parser_for_url
@@ -48,41 +49,81 @@ def save_state(path: Path, state: dict) -> None:
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def process_url(url: str, state: dict) -> int:
-    """Zwraca liczbę ofert dodanych/zaktualizowanych dla danego URL-a."""
+def process_url(url: str, state: dict, max_pages: int = 50, page_delay: float = 1.0) -> int:
+    """
+    Przetwarza jeden URL WRAZ Z PAGINACJĄ: jeśli to strona wyszukiwania
+    z wieloma stronami wyników, idzie za linkiem "Następna" (patrz
+    SiteParser.get_next_page_url) aż do ostatniej strony albo do
+    `max_pages` (zabezpieczenie przed nieskończoną pętlą).
+
+    `page_delay` - pauza (w sekundach) między kolejnymi stronami tego
+    samego wyszukiwania, żeby nie zasypywać serwisu setkami requestów
+    pod rząd (np. wyszukiwania na kilka marek naraz mogą mieć >200 stron).
+
+    Zwraca łączną liczbę ofert dodanych/zaktualizowanych ze WSZYSTKICH stron.
+    """
     try:
         parser = get_parser_for_url(url)
     except NoParserFoundError as exc:
         logger.error(str(exc))
         return 0
 
-    try:
-        html = fetch_html(url)
-    except Exception as exc:  # noqa: BLE001
-        logger.error("Nie udało się pobrać %s: %s", url, exc)
-        return 0
+    total_added = 0
+    current_url = url
+    visited: set[str] = set()
 
-    try:
-        offers = parser.parse(html, url)
-    except Exception as exc:  # noqa: BLE001
-        logger.error("Błąd parsowania %s: %s", url, exc)
-        return 0
+    for page_num in range(1, max_pages + 1):
+        if current_url in visited:
+            logger.warning("Wykryto pętlę w paginacji dla %s - przerywam.", url)
+            break
+        visited.add(current_url)
 
-    if not offers:
-        logger.warning(
-            "Parser %s nie znalazł żadnych ofert dla %s - "
-            "prawdopodobnie strona zmieniła strukturę albo wymaga renderowania JS "
-            "(patrz utils/http.fetch_with_playwright).",
-            type(parser).__name__,
-            url,
-        )
-        return 0
+        if page_num > 1 and page_delay > 0:
+            time.sleep(page_delay)
 
-    for offer in offers:
-        state[offer.url] = offer.to_dict()
+        try:
+            html = fetch_html(current_url)
+        except Exception as exc:  # noqa: BLE001
+            logger.error("Nie udało się pobrać %s: %s", current_url, exc)
+            break
 
-    logger.info("%s: znaleziono %d ofert(y)", url, len(offers))
-    return len(offers)
+        try:
+            offers = parser.parse(html, current_url)
+        except Exception as exc:  # noqa: BLE001
+            logger.error("Błąd parsowania %s: %s", current_url, exc)
+            break
+
+        if not offers:
+            if page_num == 1:
+                logger.warning(
+                    "Parser %s nie znalazł żadnych ofert dla %s - "
+                    "prawdopodobnie strona zmieniła strukturę albo wymaga renderowania JS "
+                    "(patrz utils/http.fetch_with_playwright).",
+                    type(parser).__name__,
+                    current_url,
+                )
+            break  # pusta strona = koniec wyników
+
+        for offer in offers:
+            state[offer.url] = offer.to_dict()
+        total_added += len(offers)
+        logger.info("%s (str. %d): znaleziono %d ofert(y)", url, page_num, len(offers))
+
+        if not parser.is_listing_url(current_url):
+            break  # pojedyncza oferta - nie ma paginacji
+
+        next_url = parser.get_next_page_url(html, current_url)
+        if not next_url:
+            break  # brak linku "Następna" - to była ostatnia strona
+        if page_num == max_pages:
+            logger.warning(
+                "%s: osiągnięto limit %d stron (--max-pages) - mogą zostać jeszcze wyniki.",
+                url,
+                max_pages,
+            )
+        current_url = next_url
+
+    return total_added
 
 
 def read_urls_from_file(path: Path) -> list[str]:
@@ -116,6 +157,18 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Nadpisz state.json od zera, zamiast dopisywać/aktualizować istniejące wpisy",
     )
+    parser.add_argument(
+        "--max-pages",
+        type=int,
+        default=50,
+        help="Maksymalna liczba stron paginacji na jeden URL wyszukiwania (domyślnie 50)",
+    )
+    parser.add_argument(
+        "--page-delay",
+        type=float,
+        default=1.0,
+        help="Pauza w sekundach między kolejnymi stronami paginacji (domyślnie 1.0)",
+    )
     args = parser.parse_args(argv)
 
     urls = list(args.urls)
@@ -130,7 +183,7 @@ def main(argv: list[str] | None = None) -> int:
 
     total = 0
     for url in urls:
-        total += process_url(url, state)
+        total += process_url(url, state, max_pages=args.max_pages, page_delay=args.page_delay)
 
     changes = detect_price_changes(previous_state, state)
     for old_offer, new_offer in changes:
