@@ -8,6 +8,7 @@ Reszta pipeline'u (main.py) nic o konkretnych domenach nie wie.
 
 from __future__ import annotations
 
+import unicodedata
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Optional
@@ -89,14 +90,28 @@ class SiteParser(ABC):
         strona nie miała już więcej wyników) - szuka rzeczywistego linku
         "Następna" / rel="next" w wyrenderowanym HTML-u. Jeśli dana domena
         renderuje paginację inaczej, przeciąż tę metodę w swoim parserze.
+
+        Dopasowanie tekstu linku jest CELOWO tolerancyjne (substring, nie
+        dokładna równość, plus normalizacja Unicode) - dokładne porównanie
+        potrafi po cichu nie dopasować się, gdy link zawiera dodatkową
+        ikonę/strzałkę obok tekstu (np. "Następna ›") albo gdy polskie znaki
+        są zakodowane w innej formie normalizacji Unicode. Taka cicha
+        niedopasowana pętla wygląda jak "mniej wyników niż powinno być",
+        więc wolimy dopasować trochę za szeroko niż przegapić prawdziwy link.
         """
         soup = BeautifulSoup(html, "html.parser")
 
         next_link = soup.select_one('a[rel="next"]')
         if not next_link:
             for a in soup.find_all("a", href=True):
-                text = (a.get_text() or "").strip().lower()
-                if text in ("następna", "nastepna", "next", ">", "»"):
+                raw_text = a.get_text() or ""
+                text = unicodedata.normalize("NFKC", raw_text).strip().lower()
+                if not text:
+                    continue
+                if text in (">", "»", "›", "next"):
+                    next_link = a
+                    break
+                if "następna" in text or "nastepna" in text:
                     next_link = a
                     break
 
