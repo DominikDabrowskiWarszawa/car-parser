@@ -21,7 +21,7 @@ jednego takiego linku) i z tego kontenera wyciągamy cenę / rok / itd.
 from __future__ import annotations
 
 import re
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 from bs4 import BeautifulSoup
 
@@ -37,6 +37,36 @@ _GALLERY_SELECTOR = '[class*="gallery"] img, [class*="Gallery"] img, [class*="ca
 # wzorcem URL-a - ikony (typ paliwa, itp.) mają zupełnie inną ścieżkę i są
 # plikami .svg, więc ten wzorzec pozwala je jednoznacznie odróżnić.
 _PHOTO_SRC_RE = re.compile(r"/thumb\?src=", re.IGNORECASE)
+
+
+def _resolve_findcar_image(image_url: str | None) -> str | None:
+    """
+    findcar serwuje zdjęcia przez własny proxy resize'ujący (`/thumb?src=<encoded-url>`),
+    który zwraca 403 Forbidden przy żądaniach spoza przeglądarki (najpewniej wymaga
+    nagłówka Referer / ochrona przed hotlinkingiem). Realny, bezpośredni URL zdjęcia
+    jest jednak zakodowany w parametrze `src` tego samego linku - dekodujemy go i
+    zwracamy link bezpośrednio do CDN-a hostującego oryginalne zdjęcie, zamiast do
+    proxy findcar.
+    """
+    if not image_url:
+        return image_url
+    parsed = urlparse(image_url)
+    if "/thumb" not in parsed.path:
+        return image_url
+    qs = parse_qs(parsed.query)
+    direct = (qs.get("src") or [None])[0]
+    return unquote(direct) if direct else image_url
+
+
+def _resolve_findcar_images(image_urls: list[str]) -> list[str]:
+    resolved = []
+    seen = set()
+    for u in image_urls:
+        direct = _resolve_findcar_image(u)
+        if direct and direct not in seen:
+            seen.add(direct)
+            resolved.append(direct)
+    return resolved
 
 
 class FindCarParser(SiteParser):
@@ -80,10 +110,10 @@ class FindCarParser(SiteParser):
             year = self._extract_year(container_text)
 
             if idx < len(photo_imgs):
-                image = extract_image_url(photo_imgs[idx], url)
+                image = _resolve_findcar_image(extract_image_url(photo_imgs[idx], url))
             else:
                 # fallback: szukaj w kontenerze, ale pomiń oczywiste ikony (.svg)
-                image = self._pick_non_icon_image(container, url)
+                image = _resolve_findcar_image(self._pick_non_icon_image(container, url))
 
             bm = dict(brand_model)
             if not bm.get("brand") or not bm.get("model"):
@@ -122,13 +152,15 @@ class FindCarParser(SiteParser):
 
         # Najpierw próbujemy tego samego, rozpoznawalnego wzorca proxy co w listingu.
         photo_imgs = soup.find_all("img", src=_PHOTO_SRC_RE)
-        images = extract_all_image_urls(photo_imgs, url)
+        images = _resolve_findcar_images(extract_all_image_urls(photo_imgs, url))
 
         if not images:
             gallery_imgs = soup.select(_GALLERY_SELECTOR)
-            images = extract_all_image_urls(
-                [img for img in gallery_imgs if not (img.get("src") or "").lower().endswith(".svg")],
-                url,
+            images = _resolve_findcar_images(
+                extract_all_image_urls(
+                    [img for img in gallery_imgs if not (img.get("src") or "").lower().endswith(".svg")],
+                    url,
+                )
             )
 
         if not images:
