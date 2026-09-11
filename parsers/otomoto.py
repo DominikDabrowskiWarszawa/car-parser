@@ -55,9 +55,12 @@ def _guess_model_from_title(title: str | None, brand: str | None) -> str | None:
     AWD" -> "NX", pomijając na początku tyle słów, ile ma sama nazwa marki
     (żeby poprawnie obsłużyć marki dwuczłonowe jak "Land Rover").
 
-    To uproszczona heurystyka (zakłada, że model to pojedyncze słowo zaraz
-    po marce) - dla nietypowych tytułów może się mylić, ale jest lepsza niż
-    zostawienie modelu pustym.
+    Modele wieloczłonowe (np. "Seria 1", "Klasa C") są też obsłużone: jeśli
+    drugie słowo po marce jest krótkie (<=2 znaki - liczba albo pojedyncza
+    litera), doklejamy je do modelu.
+
+    To uproszczona heurystyka - dla nietypowych tytułów może się mylić, ale
+    jest lepsza niż zostawienie modelu pustym.
     """
     if not title:
         return None
@@ -77,7 +80,14 @@ def _guess_model_from_title(title: str | None, brand: str | None) -> str | None:
     else:
         remaining = tokens[1:] if len(tokens) > 1 else []
 
-    return remaining[0] if remaining else None
+    if not remaining:
+        return None
+
+    model_tokens = [remaining[0]]
+    if len(remaining) > 1 and len(remaining[1]) <= 2 and remaining[1].isalnum():
+        model_tokens.append(remaining[1])
+
+    return " ".join(model_tokens)
 
 
 class OtomotoParser(SiteParser):

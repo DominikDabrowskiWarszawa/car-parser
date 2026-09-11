@@ -44,6 +44,30 @@ _PHOTO_SRC_RE = re.compile(r"/thumb\?src=", re.IGNORECASE)
 _KNOWN_MULTI_WORD_BRAND_SLUGS = {
     "mercedes-benz", "land-rover", "alfa-romeo", "aston-martin", "rolls-royce",
 }
+# Segmenty sluga, które sygnalizują KONIEC nazwy modelu (a nie są jej częścią) -
+# status oferty, paliwo, napęd itp. Gdy trafimy na jeden z nich (albo na
+# 4-cyfrowy rok), przestajemy zbierać kolejne segmenty jako model. Dzięki
+# temu modele wieloczłonowe (np. "seria-1", "klasa-c") są łapane w całości,
+# zamiast urywać się na pierwszym segmencie.
+_MODEL_STOP_WORDS = {
+    "nowy", "nowe", "uzywany", "uzywana", "uzywane",
+    "benzyna", "diesel", "hybryda", "hybrydowy", "elektryczny",
+    "lpg", "phev", "hev", "mhev",
+}
+_YEAR_SEGMENT_RE = re.compile(r"^\d{4}$")
+_MAX_MODEL_SEGMENTS = 3
+
+
+def _extract_model_segments(segments: list[str]) -> list[str]:
+    """Zbiera kolejne segmenty jako nazwę modelu, dopóki nie trafi na stop-słowo/rok."""
+    model_segments: list[str] = []
+    for seg in segments:
+        if seg in _MODEL_STOP_WORDS or _YEAR_SEGMENT_RE.match(seg):
+            break
+        model_segments.append(seg)
+        if len(model_segments) >= _MAX_MODEL_SEGMENTS:
+            break
+    return model_segments
 
 
 def _resolve_findcar_image(image_url: str | None) -> str | None:
@@ -263,15 +287,15 @@ class FindCarParser(SiteParser):
     def _brand_model_from_slug(href: str, known_brand_slugs: set[str] | None = None) -> dict | None:
         """
         Fallback: parsuje slug oferty, np.
-        'lexus-es-nowy-2026-hybryda-czarny-...' -> brand='Lexus', model='ES'.
+        'bmw-seria-1-uzywany-2023-benzyna-...' -> brand='BMW', model='Seria 1'.
 
-        Jeśli podano `known_brand_slugs` (np. z parametru ?makes= wyszukiwania,
-        albo ze statycznej listy marek dwuczłonowych), najpierw próbujemy
-        dopasować NAJDŁUŻSZY pasujący prefiks marki (np. 'mercedes-benz' zamiast
-        tylko 'mercedes') - to poprawnie obsługuje marki dwuczłonowe. Dopiero
-        gdy żaden znany prefiks nie pasuje, zakładamy (jak wcześniej), że marka
-        to pierwszy pojedynczy segment - co dla marek dwuczłonowych może dać
-        błędny wynik, ale to jedyna sensowna opcja bez listy znanych marek.
+        1. Dopasowuje markę: jeśli podano `known_brand_slugs`, próbuje NAJDŁUŻSZEGO
+           pasującego prefiksu (np. 'mercedes-benz' zamiast tylko 'mercedes');
+           bez dopasowania zakłada markę jednosegmentową (pierwszy segment).
+        2. Dla modelu zbiera KOLEJNE segmenty po marce, dopóki nie trafi na
+           stop-słowo (status oferty, paliwo) albo 4-cyfrowy rok - dzięki temu
+           modele wieloczłonowe (np. "Seria 1", "Klasa C") są łapane w całości,
+           a nie urywane na pierwszym słowie.
         """
         match = _OFFER_HREF_RE.search(href)
         if not match:
@@ -280,15 +304,17 @@ class FindCarParser(SiteParser):
         if len(segments) < 2:
             return None
 
+        brand_slug = segments[0]
+        brand_len = 1
         if known_brand_slugs:
             for candidate in sorted(known_brand_slugs, key=len, reverse=True):
                 candidate_segments = candidate.split("-")
                 n = len(candidate_segments)
                 if segments[:n] == candidate_segments:
-                    model_segment = segments[n] if len(segments) > n else None
-                    return {
-                        "brand": slug_to_name(candidate),
-                        "model": format_model_name(model_segment) if model_segment else None,
-                    }
+                    brand_slug = candidate
+                    brand_len = n
+                    break
 
-        return {"brand": slug_to_name(segments[0]), "model": format_model_name(segments[1])}
+        model_segments = _extract_model_segments(segments[brand_len:])
+        model = format_model_name("-".join(model_segments)) if model_segments else None
+        return {"brand": slug_to_name(brand_slug), "model": model}
