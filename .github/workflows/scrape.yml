@@ -24,6 +24,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run parser
+        env:
+        NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python main.py --urls-file urls.txt
 
       - name: Commit and push state.json
