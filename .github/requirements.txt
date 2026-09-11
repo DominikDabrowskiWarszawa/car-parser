@@ -1,0 +1,4 @@
+requests>=2.31
+beautifulsoup4>=4.12
+# opcjonalnie, tylko jeśli strona wymaga renderowania JS:
+# playwright>=1.44
