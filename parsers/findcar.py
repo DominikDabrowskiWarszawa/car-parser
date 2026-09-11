@@ -33,6 +33,10 @@ _OFFER_HREF_RE = re.compile(r"/oferty-dealerow/([a-z0-9-]+)")
 _YEAR_AFTER_KM_RE = re.compile(r"KM\D{0,3}(\d{4})")
 _PRICE_RE = re.compile(r"([\d][\d\s\u00A0]{3,})\s*zł")
 _GALLERY_SELECTOR = '[class*="gallery"] img, [class*="Gallery"] img, [class*="carousel"] img'
+# Prawdziwe zdjęcia aut na findcar są serwowane przez własny proxy pod tym
+# wzorcem URL-a - ikony (typ paliwa, itp.) mają zupełnie inną ścieżkę i są
+# plikami .svg, więc ten wzorzec pozwala je jednoznacznie odróżnić.
+_PHOTO_SRC_RE = re.compile(r"/thumb\?src=", re.IGNORECASE)
 
 
 class FindCarParser(SiteParser):
@@ -52,6 +56,14 @@ class FindCarParser(SiteParser):
         seen_hrefs: set[str] = set()
         idx = 0
 
+        # Zdjęcia ofert (proxy /thumb?src=...) pojawiają się w tej samej
+        # kolejności co karty ofert, ale nie zawsze mają wspólnego przodka
+        # z linkiem tytułowym w drzewie DOM (layouty CSS grid bywają płaskie).
+        # Dlatego parujemy je po POZYCJI, zamiast szukać "kontenera" oferty -
+        # to odporniejsze niż branie pierwszego <img> z kontenera (który
+        # potrafi trafić na ikonę typu paliwa zamiast prawdziwego zdjęcia).
+        photo_imgs = soup.find_all("img", src=_PHOTO_SRC_RE)
+
         for anchor in soup.find_all("a", href=_OFFER_HREF_RE):
             href = anchor["href"]
             if href in seen_hrefs:
@@ -67,8 +79,11 @@ class FindCarParser(SiteParser):
             price = self._extract_price(container_text)
             year = self._extract_year(container_text)
 
-            image_el = container.select_one("img")
-            image = extract_image_url(image_el, url)
+            if idx < len(photo_imgs):
+                image = extract_image_url(photo_imgs[idx], url)
+            else:
+                # fallback: szukaj w kontenerze, ale pomiń oczywiste ikony (.svg)
+                image = self._pick_non_icon_image(container, url)
 
             bm = dict(brand_model)
             if not bm.get("brand") or not bm.get("model"):
@@ -105,8 +120,17 @@ class FindCarParser(SiteParser):
 
         bm = self._brand_model_from_slug(url) or {}
 
-        gallery_imgs = soup.select(_GALLERY_SELECTOR)
-        images = extract_all_image_urls(gallery_imgs, url)
+        # Najpierw próbujemy tego samego, rozpoznawalnego wzorca proxy co w listingu.
+        photo_imgs = soup.find_all("img", src=_PHOTO_SRC_RE)
+        images = extract_all_image_urls(photo_imgs, url)
+
+        if not images:
+            gallery_imgs = soup.select(_GALLERY_SELECTOR)
+            images = extract_all_image_urls(
+                [img for img in gallery_imgs if not (img.get("src") or "").lower().endswith(".svg")],
+                url,
+            )
+
         if not images:
             og_image = soup.select_one('meta[property="og:image"]')
             if og_image and og_image.get("content"):
@@ -136,6 +160,18 @@ class FindCarParser(SiteParser):
                 return node
             node = parent
         return node
+
+    @staticmethod
+    def _pick_non_icon_image(container, base_url: str) -> str | None:
+        """Fallback: pierwszy <img> w kontenerze, który nie wygląda na ikonę (.svg)."""
+        for img in container.find_all("img"):
+            src = (img.get("src") or img.get("data-src") or "").lower()
+            if src.endswith(".svg"):
+                continue
+            image = extract_image_url(img, base_url)
+            if image:
+                return image
+        return None
 
     @staticmethod
     def _extract_price(text: str) -> int | None:
