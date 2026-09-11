@@ -29,6 +29,7 @@ from pathlib import Path
 
 from parsers.registry import NoParserFoundError, get_parser_for_url
 from utils.http import fetch_html
+from utils.notify import notify_price_change
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -89,6 +90,20 @@ def read_urls_from_file(path: Path) -> list[str]:
     return [line.strip() for line in lines if line.strip() and not line.strip().startswith("#")]
 
 
+def detect_price_changes(old_state: dict, new_state: dict) -> list[tuple[dict, dict]]:
+    """Zwraca pary (stara_oferta, nowa_oferta) dla wpisów, gdzie cena się zmieniła."""
+    changes = []
+    for key, new_offer in new_state.items():
+        old_offer = old_state.get(key)
+        if not old_offer:
+            continue  # nowa oferta, nie "zmiana ceny" - pomijamy zgodnie z wymaganiem
+        old_price = old_offer.get("price")
+        new_price = new_offer.get("price")
+        if old_price is not None and new_price is not None and old_price != new_price:
+            changes.append((old_offer, new_offer))
+    return changes
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Parser ofert samochodowych -> state.json")
     parser.add_argument("urls", nargs="*", help="Adresy URL do przetworzenia")
@@ -111,10 +126,17 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("Podaj co najmniej jeden URL (jako argument albo przez --urls-file).")
 
     state = {} if args.fresh else load_state(args.output)
+    previous_state = dict(state)  # migawka sprzed przetwarzania - do wykrycia zmian cen
 
     total = 0
     for url in urls:
         total += process_url(url, state)
+
+    changes = detect_price_changes(previous_state, state)
+    for old_offer, new_offer in changes:
+        notify_price_change(old_offer, new_offer)
+    if changes:
+        logger.info("Wykryto %d zmian(y) ceny - wysłano powiadomienia.", len(changes))
 
     save_state(args.output, state)
     logger.info("Zapisano %s (łącznie %d wpisów, %d w tym przebiegu).", args.output, len(state), total)
