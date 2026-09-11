@@ -23,7 +23,8 @@ class Offer:
     year: Optional[int] = None
     brand: Optional[str] = None
     model: Optional[str] = None
-    # miejsce na dodatkowe, opcjonalne pola per-domena (np. przebieg, paliwo)
+    image: Optional[str] = None
+    # miejsce na dodatkowe, opcjonalne pola per-domena (np. przebieg, paliwo, pełna galeria)
     extra: dict = field(default_factory=dict)
 
     def to_dict(self) -> dict:
@@ -34,6 +35,7 @@ class Offer:
             "year": self.year,
             "brand": self.brand,
             "model": self.model,
+            "image": self.image,
         }
         base.update(self.extra)
         return base

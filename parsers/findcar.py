@@ -26,11 +26,13 @@ from urllib.parse import parse_qs, urlparse
 from bs4 import BeautifulSoup
 
 from .base import Offer, SiteParser
+from utils.images import extract_all_image_urls, extract_image_url
 from utils.text import clean_text, format_model_name, parse_price, parse_year, slug_to_name
 
 _OFFER_HREF_RE = re.compile(r"/oferty-dealerow/([a-z0-9-]+)")
 _YEAR_AFTER_KM_RE = re.compile(r"KM\D{0,3}(\d{4})")
 _PRICE_RE = re.compile(r"([\d][\d\s\u00A0]{3,})\s*zł")
+_GALLERY_SELECTOR = '[class*="gallery"] img, [class*="Gallery"] img, [class*="carousel"] img'
 
 
 class FindCarParser(SiteParser):
@@ -65,6 +67,9 @@ class FindCarParser(SiteParser):
             price = self._extract_price(container_text)
             year = self._extract_year(container_text)
 
+            image_el = container.select_one("img")
+            image = extract_image_url(image_el, url)
+
             bm = dict(brand_model)
             if not bm.get("brand") or not bm.get("model"):
                 bm = self._brand_model_from_slug(href) or bm
@@ -77,6 +82,7 @@ class FindCarParser(SiteParser):
                     year=year,
                     brand=bm.get("brand"),
                     model=bm.get("model"),
+                    image=image,
                     extra={"source_offer_url": offer_url},
                 )
             )
@@ -99,7 +105,22 @@ class FindCarParser(SiteParser):
 
         bm = self._brand_model_from_slug(url) or {}
 
-        return Offer(url=url, title=title, price=price, year=year, **bm)
+        gallery_imgs = soup.select(_GALLERY_SELECTOR)
+        images = extract_all_image_urls(gallery_imgs, url)
+        if not images:
+            og_image = soup.select_one('meta[property="og:image"]')
+            if og_image and og_image.get("content"):
+                images = [og_image["content"]]
+
+        return Offer(
+            url=url,
+            title=title,
+            price=price,
+            year=year,
+            image=images[0] if images else None,
+            extra={"images": images} if len(images) > 1 else {},
+            **bm,
+        )
 
     # ------------------------------------------------------------------ #
     @staticmethod

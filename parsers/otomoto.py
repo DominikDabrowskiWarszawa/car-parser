@@ -26,6 +26,7 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 from .base import Offer, SiteParser
+from utils.images import extract_all_image_urls, extract_image_url
 from utils.text import clean_text, format_model_name, parse_price, parse_year, slug_to_name
 
 # --- selektory do weryfikacji / dostrojenia -------------------------------
@@ -33,6 +34,11 @@ _CARD_SELECTOR = '[data-testid="listing-ad"], article'
 _TITLE_SELECTOR = 'h2 a, [data-testid="ad-title"] a, h1'
 _PRICE_SELECTOR = '[data-testid="ad-price"], h3, [class*="price"]'
 _PARAMS_SELECTOR = '[data-parameter], dl, [data-testid="parameters-container"]'
+_CARD_IMAGE_SELECTOR = "img"
+_GALLERY_SELECTOR = (
+    '[data-testid="gallery"] img, [data-testid="photo-gallery"] img, '
+    '.gallery img, [class*="gallery"] img'
+)
 # ---------------------------------------------------------------------------
 
 
@@ -76,12 +82,18 @@ class OtomotoParser(SiteParser):
                 offers_block = product.get("offers")
                 if isinstance(offers_block, dict):
                     price = parse_price(str(offers_block.get("price", "")))
+
+                image = product.get("image")
+                if isinstance(image, list):
+                    image = image[0] if image else None
+
                 offers.append(
                     Offer(
                         url=f"{url}#offer-{idx}",
                         title=clean_text(name),
                         price=price,
                         year=parse_year(name),
+                        image=image,
                         **self._brand_model_from_url(url),
                     )
                 )
@@ -106,6 +118,9 @@ class OtomotoParser(SiteParser):
 
             year = self._extract_year_from_params(card)
 
+            image_el = card.select_one(_CARD_IMAGE_SELECTOR)
+            image = extract_image_url(image_el, url)
+
             brand_model = self._brand_model_from_url(url)
 
             offers.append(
@@ -114,6 +129,7 @@ class OtomotoParser(SiteParser):
                     title=title,
                     price=price,
                     year=year,
+                    image=image,
                     **brand_model,
                     extra={"source_offer_url": offer_url},
                 )
@@ -151,11 +167,21 @@ class OtomotoParser(SiteParser):
         )
         year = parse_year(params_text) or parse_year(title)
 
+        gallery_imgs = soup.select(_GALLERY_SELECTOR)
+        images = extract_all_image_urls(gallery_imgs, url)
+        if not images:
+            # fallback: pierwszy sensowny <img> na stronie (np. og:image jako ostatnia deska ratunku)
+            og_image = soup.select_one('meta[property="og:image"]')
+            if og_image and og_image.get("content"):
+                images = [og_image["content"]]
+
         return Offer(
             url=url,
             title=title,
             price=price,
             year=year,
+            image=images[0] if images else None,
+            extra={"images": images} if len(images) > 1 else {},
             **self._brand_model_from_url(url),
         )
 
