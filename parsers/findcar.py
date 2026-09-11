@@ -37,6 +37,13 @@ _GALLERY_SELECTOR = '[class*="gallery"] img, [class*="Gallery"] img, [class*="ca
 # wzorcem URL-a - ikony (typ paliwa, itp.) mają zupełnie inną ścieżkę i są
 # plikami .svg, więc ten wzorzec pozwala je jednoznacznie odróżnić.
 _PHOTO_SRC_RE = re.compile(r"/thumb\?src=", re.IGNORECASE)
+# Marki dwuczłonowe (myślnik w slugu) - używane jako fallback przy zgadywaniu
+# marki/modelu ze slug-a oferty, gdy nie mamy podpowiedzi z parametru `makes=`
+# (patrz _brand_model_from_slug). Lista niepełna - w razie potrzeby dopisz
+# kolejne marki dwuczłonowe, które napotkasz w danych.
+_KNOWN_MULTI_WORD_BRAND_SLUGS = {
+    "mercedes-benz", "land-rover", "alfa-romeo", "aston-martin", "rolls-royce",
+}
 
 
 def _resolve_findcar_image(image_url: str | None) -> str | None:
@@ -69,6 +76,15 @@ def _resolve_findcar_images(image_urls: list[str]) -> list[str]:
     return resolved
 
 
+def _known_brand_slugs_from_query(url: str) -> set[str]:
+    """Wyciąga zbiór slugów marek z parametru ?makes=... (może być ich kilka, po przecinku)."""
+    qs = parse_qs(urlparse(url).query)
+    makes_raw = (qs.get("makes") or [None])[0]
+    if not makes_raw:
+        return set()
+    return {m.strip() for m in makes_raw.split(",") if m.strip()}
+
+
 class FindCarParser(SiteParser):
     domains = {"findcar.pl"}
 
@@ -93,6 +109,7 @@ class FindCarParser(SiteParser):
         # to odporniejsze niż branie pierwszego <img> z kontenera (który
         # potrafi trafić na ikonę typu paliwa zamiast prawdziwego zdjęcia).
         photo_imgs = soup.find_all("img", src=_PHOTO_SRC_RE)
+        known_brand_slugs = _known_brand_slugs_from_query(url) | _KNOWN_MULTI_WORD_BRAND_SLUGS
 
         for anchor in soup.find_all("a", href=_OFFER_HREF_RE):
             href = anchor["href"]
@@ -117,7 +134,7 @@ class FindCarParser(SiteParser):
 
             bm = dict(brand_model)
             if not bm.get("brand") or not bm.get("model"):
-                bm = self._brand_model_from_slug(href) or bm
+                bm = self._brand_model_from_slug(href, known_brand_slugs) or bm
 
             offers.append(
                 Offer(
@@ -148,7 +165,7 @@ class FindCarParser(SiteParser):
         price = self._extract_price(body_text)
         year = self._extract_year(body_text) or parse_year(url)
 
-        bm = self._brand_model_from_slug(url) or {}
+        bm = self._brand_model_from_slug(url, _KNOWN_MULTI_WORD_BRAND_SLUGS) or {}
 
         # Najpierw próbujemy tego samego, rozpoznawalnego wzorca proxy co w listingu.
         photo_imgs = soup.find_all("img", src=_PHOTO_SRC_RE)
@@ -219,23 +236,42 @@ class FindCarParser(SiteParser):
 
     @staticmethod
     def _brand_model_from_query(url: str) -> dict:
-        """Strona wyszukiwania trzyma markę/model w query stringu: ?makes=lexus&models=es."""
+        """
+        Strona wyszukiwania trzyma markę/model w query stringu: ?makes=lexus&models=es.
+
+        UWAGA: przy szerszych wyszukiwaniach (?makes=lexus,audi,bmw,...) wartość
+        zawiera wiele marek naraz, oddzielonych przecinkiem - w takim wypadku NIE
+        da się przypisać jednej marki/modelu do wszystkich ofert, więc celowo
+        zwracamy None, co wymusza użycie fallbacku _brand_model_from_slug()
+        (per-oferta, na podstawie jej własnego URL-a).
+        """
         qs = parse_qs(urlparse(url).query)
         brand_slug = (qs.get("makes") or [None])[0]
         model_slug = (qs.get("models") or [None])[0]
+
+        if brand_slug and "," in brand_slug:
+            brand_slug = None
+        if model_slug and "," in model_slug:
+            model_slug = None
+
         return {
             "brand": slug_to_name(brand_slug) if brand_slug else None,
             "model": format_model_name(model_slug) if model_slug else None,
         }
 
     @staticmethod
-    def _brand_model_from_slug(href: str) -> dict | None:
+    def _brand_model_from_slug(href: str, known_brand_slugs: set[str] | None = None) -> dict | None:
         """
         Fallback: parsuje slug oferty, np.
         'lexus-es-nowy-2026-hybryda-czarny-...' -> brand='Lexus', model='ES'.
-        Zakładamy, że pierwsze dwa segmenty to marka i model - to działa dla
-        większości marek jednoczłonowych, ale np. dla 'mercedes-benz-c-klasa-...'
-        może dać błędny wynik. Traktować jako fallback, nie główne źródło.
+
+        Jeśli podano `known_brand_slugs` (np. z parametru ?makes= wyszukiwania,
+        albo ze statycznej listy marek dwuczłonowych), najpierw próbujemy
+        dopasować NAJDŁUŻSZY pasujący prefiks marki (np. 'mercedes-benz' zamiast
+        tylko 'mercedes') - to poprawnie obsługuje marki dwuczłonowe. Dopiero
+        gdy żaden znany prefiks nie pasuje, zakładamy (jak wcześniej), że marka
+        to pierwszy pojedynczy segment - co dla marek dwuczłonowych może dać
+        błędny wynik, ale to jedyna sensowna opcja bez listy znanych marek.
         """
         match = _OFFER_HREF_RE.search(href)
         if not match:
@@ -243,4 +279,16 @@ class FindCarParser(SiteParser):
         segments = match.group(1).split("-")
         if len(segments) < 2:
             return None
+
+        if known_brand_slugs:
+            for candidate in sorted(known_brand_slugs, key=len, reverse=True):
+                candidate_segments = candidate.split("-")
+                n = len(candidate_segments)
+                if segments[:n] == candidate_segments:
+                    model_segment = segments[n] if len(segments) > n else None
+                    return {
+                        "brand": slug_to_name(candidate),
+                        "model": format_model_name(model_segment) if model_segment else None,
+                    }
+
         return {"brand": slug_to_name(segments[0]), "model": format_model_name(segments[1])}

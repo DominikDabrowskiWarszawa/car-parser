@@ -39,7 +39,45 @@ _GALLERY_SELECTOR = (
     '[data-testid="gallery"] img, [data-testid="photo-gallery"] img, '
     '.gallery img, [class*="gallery"] img'
 )
+# Segmenty ścieżki URL, które NIE są nazwą modelu, mimo że siedzą na tej
+# samej pozycji co model w typowym /osobowe/<marka>/<model> - najczęściej
+# to filtr statusu (nowe/uzywane) albo filtr rocznika (od-2023, do-2023),
+# używany przy szerszych wyszukiwaniach typu "wszystkie Lexusy od 2023".
+_NON_MODEL_SEGMENT_RE = re.compile(r"^(nowe|uzywane|od-\d{4}|do-\d{4})$")
 # ---------------------------------------------------------------------------
+
+
+def _guess_model_from_title(title: str | None, brand: str | None) -> str | None:
+    """
+    Fallback, gdy w URL-u wyszukiwania nie ma konkretnego modelu (np.
+    "/osobowe/lexus/od-2023" przeszukuje WSZYSTKIE modele Lexusa naraz).
+    Zgaduje model z tytułu konkretnej oferty, np. "Lexus NX 350h Prestige
+    AWD" -> "NX", pomijając na początku tyle słów, ile ma sama nazwa marki
+    (żeby poprawnie obsłużyć marki dwuczłonowe jak "Land Rover").
+
+    To uproszczona heurystyka (zakłada, że model to pojedyncze słowo zaraz
+    po marce) - dla nietypowych tytułów może się mylić, ale jest lepsza niż
+    zostawienie modelu pustym.
+    """
+    if not title:
+        return None
+    tokens = title.split()
+    if not tokens:
+        return None
+
+    if brand:
+        brand_tokens = brand.split()
+        n = len(brand_tokens)
+        if len(tokens) > n and all(
+            tokens[i].lower() == brand_tokens[i].lower() for i in range(n)
+        ):
+            remaining = tokens[n:]
+        else:
+            remaining = tokens[1:] if len(tokens) > 1 else []
+    else:
+        remaining = tokens[1:] if len(tokens) > 1 else []
+
+    return remaining[0] if remaining else None
 
 
 class OtomotoParser(SiteParser):
@@ -87,6 +125,10 @@ class OtomotoParser(SiteParser):
                 if isinstance(image, list):
                     image = image[0] if image else None
 
+                bm = self._brand_model_from_url(url)
+                if not bm.get("model"):
+                    bm["model"] = _guess_model_from_title(clean_text(name), bm.get("brand"))
+
                 offers.append(
                     Offer(
                         url=f"{url}#offer-{idx}",
@@ -94,7 +136,7 @@ class OtomotoParser(SiteParser):
                         price=price,
                         year=parse_year(name),
                         image=image,
-                        **self._brand_model_from_url(url),
+                        **bm,
                     )
                 )
         return offers
@@ -122,6 +164,8 @@ class OtomotoParser(SiteParser):
             image = extract_image_url(image_el, url)
 
             brand_model = self._brand_model_from_url(url)
+            if not brand_model.get("model"):
+                brand_model["model"] = _guess_model_from_title(title, brand_model.get("brand"))
 
             offers.append(
                 Offer(
@@ -182,10 +226,17 @@ class OtomotoParser(SiteParser):
             year=year,
             image=images[0] if images else None,
             extra={"images": images} if len(images) > 1 else {},
-            **self._brand_model_from_url(url),
+            **self._brand_model_from_url_with_title_fallback(url, title),
         )
 
     # ------------------------------------------------------------------ #
+    # ------------------------------------------------------------------ #
+    def _brand_model_from_url_with_title_fallback(self, url: str, title: str | None) -> dict:
+        bm = self._brand_model_from_url(url)
+        if not bm.get("model"):
+            bm["model"] = _guess_model_from_title(title, bm.get("brand"))
+        return bm
+
     @staticmethod
     def _brand_model_from_url(url: str) -> dict:
         """
@@ -193,6 +244,12 @@ class OtomotoParser(SiteParser):
           /osobowe/nowe/toyota/rav4
           /osobowe/bmw/x3/od-2024
         Format: /osobowe/[nowe|uzywane/]<marka>/<model>[/...]
+
+        UWAGA: przy szerszych wyszukiwaniach (np. /osobowe/lexus/od-2023 -
+        wszystkie modele Lexusa nowsze niż 2023) w ścieżce w ogóle nie ma
+        segmentu modelu - jest tylko filtr roku (`od-2023` / `do-2023`).
+        Odróżniamy to od nazwy modelu wzorcem `_NON_MODEL_SEGMENT_RE` poniżej,
+        żeby nie wpisać np. "OD 2023" jako model.
         """
         path_parts = [p for p in urlparse(url).path.split("/") if p]
         try:
@@ -200,9 +257,7 @@ class OtomotoParser(SiteParser):
         except ValueError:
             return {"brand": None, "model": None}
 
-        remaining = path_parts[start:]
-        if remaining and remaining[0] in ("nowe", "uzywane"):
-            remaining = remaining[1:]
+        remaining = [p for p in path_parts[start:] if not _NON_MODEL_SEGMENT_RE.match(p)]
 
         brand = slug_to_name(remaining[0]) if len(remaining) > 0 else None
         model = format_model_name(remaining[1]) if len(remaining) > 1 else None
