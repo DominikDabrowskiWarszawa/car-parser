@@ -8,6 +8,24 @@ import unicodedata
 _PRICE_RE = re.compile(r"[\d\s\u00A0.,]+")
 _YEAR_RE = re.compile(r"\b(19[5-9]\d|20[0-4]\d)\b")
 
+# Marki, których nazwy nie da się poprawnie odgadnąć ze slug-a samą
+# heurystyką (akronimy typu BMW/MG, marki wieloczłonowe ze spacją zamiast
+# myślnika typu "Land Rover"). Lista niepełna - dopisuj kolejne w miarę
+# napotykania błędnych przypadków.
+_BRAND_NAME_OVERRIDES = {
+    "bmw": "BMW",
+    "mg": "MG",
+    "vw": "Volkswagen",
+    "kia": "Kia",
+    "mercedes-benz": "Mercedes-Benz",
+    "land-rover": "Land Rover",
+    "alfa-romeo": "Alfa Romeo",
+    "aston-martin": "Aston Martin",
+    "rolls-royce": "Rolls-Royce",
+    "great-wall": "Great Wall",
+    "ds-automobiles": "DS Automobiles",
+}
+
 
 def clean_text(value: str | None) -> str | None:
     """Usuwa nadmiarowe białe znaki (w tym &nbsp;) i przycina tekst."""
@@ -45,9 +63,30 @@ def parse_year(raw: str | None) -> int | None:
 
 
 def slug_to_name(slug: str) -> str:
-    """np. 'mercedes-benz' -> 'Mercedes-Benz' (best effort, do dopracowania per marka)."""
+    """
+    np. 'mercedes-benz' -> 'Mercedes-Benz', 'bmw' -> 'BMW'.
+
+    Najpierw sprawdza `_BRAND_NAME_OVERRIDES` (dla akronimów i marek, których
+    nie da się poprawnie odgadnąć ze slug-a), a dopiero potem stosuje ogólną
+    heurystykę: krótkie (<=3 znaki), czysto literowe segmenty -> UPPERCASE
+    (traktujemy jako potencjalny akronim), dłuższe -> Capitalize.
+    """
+    if not slug:
+        return slug
+    key = slug.lower()
+    if key in _BRAND_NAME_OVERRIDES:
+        return _BRAND_NAME_OVERRIDES[key]
+
     parts = re.split(r"[-_]", slug)
-    return "-".join(p.capitalize() for p in parts)
+    formatted = []
+    for part in parts:
+        if not part:
+            continue
+        if len(part) <= 3 and part.isalpha():
+            formatted.append(part.upper())
+        else:
+            formatted.append(part.capitalize())
+    return "-".join(formatted)
 
 
 def format_model_name(slug: str) -> str:
