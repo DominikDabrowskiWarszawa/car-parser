@@ -71,6 +71,7 @@ def process_url(url: str, state: dict, max_pages: int = 50, page_delay: float = 
     total_added = 0
     current_url = url
     visited: set[str] = set()
+    declared_total: int | None = None
 
     for page_num in range(1, max_pages + 1):
         if current_url in visited:
@@ -104,6 +105,11 @@ def process_url(url: str, state: dict, max_pages: int = 50, page_delay: float = 
                 )
             break  # pusta strona = koniec wyników
 
+        if page_num == 1:
+            declared_total = parser.extract_total_count(html)
+            if declared_total is not None:
+                logger.info("%s: strona deklaruje %d wyników łącznie.", url, declared_total)
+
         for offer in offers:
             state[offer.url] = offer.to_dict()
         total_added += len(offers)
@@ -122,6 +128,15 @@ def process_url(url: str, state: dict, max_pages: int = 50, page_delay: float = 
                 max_pages,
             )
         current_url = next_url
+
+    if declared_total is not None and total_added < declared_total:
+        logger.warning(
+            "%s: zebrano %d ofert, a strona deklarowała %d - część mogła zostać pominięta "
+            "(sprawdź czy nie trafiono na --max-pages albo błąd pobierania w trakcie).",
+            url,
+            total_added,
+            declared_total,
+        )
 
     return total_added
 
@@ -143,6 +158,35 @@ def detect_price_changes(old_state: dict, new_state: dict) -> list[tuple[dict, d
         if old_price is not None and new_price is not None and old_price != new_price:
             changes.append((old_offer, new_offer))
     return changes
+
+
+def deduplicate_by_offer_identity(state: dict) -> tuple[dict, int]:
+    """
+    Usuwa zduplikowane wpisy reprezentujące TĘ SAMĄ realną ofertę pod różnymi
+    (pozycyjnymi) kluczami - np. "#offer-14" na jednej stronie wyników i
+    "#offer-0" na kolejnej. Zdarza się przy niestabilnym sortowaniu po cenie
+    na stronie źródłowej: gdy wiele ofert ma IDENTYCZNĄ cenę (częste przy
+    nowych autach w cenach katalogowych), kolejność między requestem o
+    stronę N i N+1 nie jest gwarantowana, więc ta sama oferta może
+    "przeciekać" na dwie kolejne strony w trakcie jednego przebiegu
+    paginacji. To nie błąd w budowaniu URL-i stron - to niestabilność
+    sortowania po stronie serwisu źródłowego.
+
+    Identyfikuje ofertę po `source_offer_url` (wpisy z listingu) albo po
+    samym `url` (wpisy pojedynczej oferty, gdzie url == kanoniczny adres
+    oferty). Zachowuje PIERWSZE napotkane wystąpienie każdej oferty.
+    """
+    seen: set[str] = set()
+    deduped: dict = {}
+    removed = 0
+    for key, offer in state.items():
+        identity = offer.get("source_offer_url") or offer.get("url")
+        if identity in seen:
+            removed += 1
+            continue
+        seen.add(identity)
+        deduped[key] = offer
+    return deduped, removed
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -184,6 +228,14 @@ def main(argv: list[str] | None = None) -> int:
     total = 0
     for url in urls:
         total += process_url(url, state, max_pages=args.max_pages, page_delay=args.page_delay)
+
+    state, removed_dupes = deduplicate_by_offer_identity(state)
+    if removed_dupes:
+        logger.info(
+            "Usunięto %d zduplikowanych wpisów (ta sama oferta pod różnymi kluczami - "
+            "prawdopodobnie niestabilne sortowanie po cenie przy remisach).",
+            removed_dupes,
+        )
 
     changes = detect_price_changes(previous_state, state)
     for old_offer, new_offer in changes:
