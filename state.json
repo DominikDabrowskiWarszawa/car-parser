@@ -1,16 +1,6 @@
 {
   "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-0": {
     "url": "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-0",
-    "title": "AudiA1 35 TFSI S tronic",
-    "price": 89900,
-    "year": 2023,
-    "brand": "Audi",
-    "model": "A1",
-    "image": "https://panel.pewneauto.pl/media/UsedCar/394363/6a0ae9581151d.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-uzywany-2023-benzyna-bialy-naped-przod-hatchback-malopolskie-toyota-romanowski-krakow-024924062"
-  },
-  "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1",
     "title": "AudiA1 Sportback 35 TFSI 150 KM LED Virtual Ambiente Smartphone",
     "price": 89900,
     "year": 2023,
@@ -19,14 +9,24 @@
     "image": "https://carapi.activemotors.pl/photo/2157535/44903f1fd78cd6a5.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-sportback-uzywany-2023-benzyna-bialy-naped-przod-auto-miejskie-dolnoslaskie-audi-select-plus-audi-wroclaw-097226377"
   },
+  "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1",
+    "title": "AudiA1 35 TFSI S tronic",
+    "price": 89900,
+    "year": 2023,
+    "brand": "Audi",
+    "model": "A1",
+    "image": "https://panel.pewneauto.pl/media/UsedCar/394363/6a0ae9581151d.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-uzywany-2023-benzyna-bialy-naped-przod-hatchback-malopolskie-toyota-romanowski-krakow-024924062"
+  },
   "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-2": {
     "url": "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-2",
     "title": "AudiA1 Sportback Advanced",
-    "price": 95800,
+    "price": 92800,
     "year": 2023,
     "brand": "Audi",
     "model": "A1 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2162582/a8f9caf6654272cc.jpg",
+    "image": "https://carapi.activemotors.pl/photo/2162582/de28e8e94de73008.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-sportback-uzywany-2023-benzyna-niebieski-naped-przod-kompakt-mazowieckie-audi-krotoski-warszawa-wolica-080423213"
   },
   "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-3": {
@@ -116,8 +116,8 @@
     "year": 2023,
     "brand": "Audi",
     "model": "A1 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2015639/3cc855a93491f613.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-sportback-uzywany-2023-benzyna-czarny-naped-przod-kompakt-slaskie-audi-lellek-katowice-091858445"
+    "image": "https://cdn.lellek.pl/assets/14/vehicles/657/60c663de-3e10-4230-85be-3bb83aaa0fdd/renders/active/original.jpeg?v=1",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-sportback-uzywany-2023-benzyna-czarny-naped-przod-kompakt-slaskie-audi-select-plus-lellek-katowice-065717767"
   },
   "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12": {
     "url": "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12",
@@ -126,8 +126,8 @@
     "year": 2023,
     "brand": "Audi",
     "model": "A1 Sportback",
-    "image": "https://cdn.lellek.pl/assets/14/vehicles/657/60c663de-3e10-4230-85be-3bb83aaa0fdd/renders/active/original.jpeg?v=1",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-sportback-uzywany-2023-benzyna-czarny-naped-przod-kompakt-slaskie-audi-select-plus-lellek-katowice-065717767"
+    "image": "https://carapi.activemotors.pl/photo/2015639/3cc855a93491f613.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a1-sportback-uzywany-2023-benzyna-czarny-naped-przod-kompakt-slaskie-audi-lellek-katowice-091858445"
   },
   "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13": {
     "url": "https://findcar.pl/znajdz-samochod?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13",
@@ -451,6 +451,16 @@
   },
   "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-0": {
     "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-0",
+    "title": "AudiQ3 Sportback 35 TFSI mHEV S tronic",
+    "price": 121900,
+    "year": 2023,
+    "brand": "Audi",
+    "model": "Q3 Sportback",
+    "image": "https://carapi.activemotors.pl/photo/2206745/842027d2e8cb3213.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-uzywany-2023-benzyna-czarny-naped-przod-kompakt-dolnoslaskie-certyfikowane-uzywane-motorpol-wroclaw-032736307"
+  },
+  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1",
     "title": "AudiA3 Sportback advanced 35 TFSI 110(150) kW(KM) S tronic",
     "price": 121900,
     "year": 2025,
@@ -459,8 +469,8 @@
     "image": "https://carapi.activemotors.pl/photo/2168458/6f9d005bb70c3ea3.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a3-sportback-uzywany-2025-benzyna-czarny-naped-przod-kompakt-mazowieckie-audi-porsche-warszawa-polczynska-026091726"
   },
-  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-1",
+  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-2",
     "title": "LexusUX 250h GPF Business 2WD",
     "price": 121900,
     "year": 2023,
@@ -468,16 +478,6 @@
     "model": "UX",
     "image": "https://panel.pewneauto.pl/media/UsedCar/422461/6a8ecdab6f6ab.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/lexus-ux-uzywany-2023-hybryda-bialy-naped-przod-suv-zachodniopomorskie-lexus-kozlowski-szczecin-028610502"
-  },
-  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-2",
-    "title": "AudiQ3 Sportback 35 TFSI mHEV S tronic",
-    "price": 121900,
-    "year": 2023,
-    "brand": "Audi",
-    "model": "Q3 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2206745/842027d2e8cb3213.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-uzywany-2023-benzyna-czarny-naped-przod-kompakt-dolnoslaskie-certyfikowane-uzywane-motorpol-wroclaw-032736307"
   },
   "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-3": {
     "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-3",
@@ -501,13 +501,13 @@
   },
   "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-5": {
     "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-5",
-    "title": "AudiQ3 Sportback",
-    "price": 122900,
+    "title": "AudiQ3 35 TFSI mHEV S Line S tronic",
+    "price": 122800,
     "year": 2023,
     "brand": "Audi",
-    "model": "Q3 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2141520/06836de69a1bb799.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-uzywany-2023-benzyna-bialy-naped-przod-suv-mazowieckie-audi-warszawa-wilanow-008896472"
+    "model": "Q3",
+    "image": "https://carapi.activemotors.pl/photo/2094785/fbc7cb41f9da721d.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-uzywany-2023-benzyna-czarny-naped-przod-suv-mazowieckie-audi-krotoski-warszawa-wolica-091413936"
   },
   "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-6": {
     "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-6",
@@ -551,6 +551,16 @@
   },
   "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-10": {
     "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-10",
+    "title": "AudiQ3 Sportback",
+    "price": 122900,
+    "year": 2023,
+    "brand": "Audi",
+    "model": "Q3 Sportback",
+    "image": "https://carapi.activemotors.pl/photo/2141520/06836de69a1bb799.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-uzywany-2023-benzyna-bialy-naped-przod-suv-mazowieckie-audi-warszawa-wilanow-008896472"
+  },
+  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11",
     "title": "AudiA3 Sportback S line 35 TFSI 110(150) kW(KM) S tronic",
     "price": 122900,
     "year": 2023,
@@ -559,8 +569,8 @@
     "image": "https://carapi.activemotors.pl/photo/2157537/2ba83c8e884fae88.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a3-sportback-uzywany-2023-benzyna-bialy-naped-przod-kompakt-dolnoslaskie-audi-select-plus-audi-wroclaw-077533706"
   },
-  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11",
+  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12": {
+    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12",
     "title": "LexusUX 250h Elegance 2WD",
     "price": 123900,
     "year": 2023,
@@ -569,8 +579,8 @@
     "image": "https://panel.pewneauto.pl/media/UsedCar/408416/6a832ab52cd7c.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/lexus-ux-uzywany-2023-hybryda-srebrny-naped-przod-suv-malopolskie-toyota-krakow-modlnica-026058984"
   },
-  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12": {
-    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12",
+  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13",
     "title": "LexusUX 250h GPF Business 2WD",
     "price": 123900,
     "year": 2023,
@@ -579,8 +589,8 @@
     "image": "https://panel.pewneauto.pl/media/UsedCar/421580/6aa177f43da3b.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/lexus-ux-uzywany-2023-hybryda-czarny-naped-przod-suv-malopolskie-toyota-krakow-modlnica-086843310"
   },
-  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13",
+  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-14": {
+    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-14",
     "title": "AudiA3 Sportback 35 TFSI mHEV Advanced S tronic",
     "price": 124900,
     "year": 2025,
@@ -588,16 +598,6 @@
     "model": "A3 Sportback",
     "image": "https://carapi.activemotors.pl/photo/2241090/fa97e109ccb6b0fa.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a3-sportback-uzywany-2025-benzyna-czarny-naped-przod-kompakt-wielkopolskie-audi-centrum-poznan-lawica-014819268"
-  },
-  "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-14": {
-    "url": "https://findcar.pl/znajdz-samochod/4?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-14",
-    "title": "AudiA3 Limousine advanced 35 TFSI 110(150) kW(KM) S tronic",
-    "price": 124900,
-    "year": 2025,
-    "brand": "Audi",
-    "model": "A3 Limousine",
-    "image": "https://carapi.activemotors.pl/photo/2200186/c51a6cbf53d52f1d.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a3-limousine-uzywany-2025-benzyna-niebieski-naped-przod-sedan-limuzyna-mazowieckie-audi-warszawa-wilanow-013921271"
   },
   "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-0": {
     "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-0",
@@ -661,6 +661,16 @@
   },
   "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-6": {
     "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-6",
+    "title": "LexusUX 250h GPF Business 2WD",
+    "price": 124900,
+    "year": 2023,
+    "brand": "Lexus",
+    "model": "UX",
+    "image": "https://panel.pewneauto.pl/media/UsedCar/423384/6a8fe061d0a9f.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/lexus-ux-uzywany-2023-hybryda-zielony-naped-przod-suv-dolnoslaskie-toyota-nowakowski-jelenia-gora-087390565"
+  },
+  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-7": {
+    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-7",
     "title": "AudiA4 Avant advanced 35 TFSI 110(150) kW(KM) S tronic",
     "price": 124900,
     "year": 2024,
@@ -669,8 +679,8 @@
     "image": "https://carapi.activemotors.pl/photo/2248227/ac4e3b0f21472515.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a4-avant-uzywany-2024-benzyna-szary-naped-przod-kombi-wielkopolskie-audi-centrum-poznan-lawica-044409149"
   },
-  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-7": {
-    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-7",
+  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-8": {
+    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-8",
     "title": "LexusUX 250h GPF Business 2WD",
     "price": 124900,
     "year": 2023,
@@ -679,8 +689,8 @@
     "image": "https://panel.pewneauto.pl/media/UsedCar/424502/6a9a962992903.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/lexus-ux-uzywany-2023-hybryda-bialy-naped-przod-suv-slaskie-lexus-katowice-058269702"
   },
-  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-8": {
-    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-8",
+  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-9": {
+    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-9",
     "title": "AudiA3 Sportback advanced 35 TFSI 110(150) kW(KM) S tronic",
     "price": 125500,
     "year": 2026,
@@ -689,28 +699,8 @@
     "image": "https://carapi.activemotors.pl/photo/2237334/3f724bf9e55a2101.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a3-sportback-nowy-2026-benzyna-bialy-naped-przod-kompakt-wielkopolskie-audi-porsche-poznan-franowo-066224359"
   },
-  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-9": {
-    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-9",
-    "title": "AudiQ3 35 TFSI mHEV S Line S tronic",
-    "price": 125800,
-    "year": 2023,
-    "brand": "Audi",
-    "model": "Q3",
-    "image": "https://carapi.activemotors.pl/photo/2094785/82de717fbe8ac075.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-uzywany-2023-benzyna-czarny-naped-przod-suv-mazowieckie-audi-krotoski-warszawa-wolica-091413936"
-  },
   "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-10": {
     "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-10",
-    "title": "Mercedes-BenzCLA 200 Progressive",
-    "price": 125900,
-    "year": 2023,
-    "brand": "Mercedes-Benz",
-    "model": "CLA 200",
-    "image": "https://carapi.activemotors.pl/photo/2213464/9a114db795e3b8c1.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/mercedes-benz-cla-200-uzywany-2023-benzyna-niebieski-naped-przod-kombi-mazowieckie-mercedes-benz-autotorino-warszawa-005403144"
-  },
-  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11",
     "title": "AudiA3 Limousine",
     "price": 125900,
     "year": 2025,
@@ -719,18 +709,18 @@
     "image": "https://carapi.activemotors.pl/photo/2166387/290619e453f8e2e6.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a3-limousine-uzywany-2025-benzyna-granatowy-naped-przod-sedan-limuzyna-wielkopolskie-audi-porsche-poznan-franowo-072713402"
   },
+  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-11",
+    "title": "Mercedes-BenzCLA 200 Progressive",
+    "price": 125900,
+    "year": 2023,
+    "brand": "Mercedes-Benz",
+    "model": "CLA 200",
+    "image": "https://carapi.activemotors.pl/photo/2213464/9a114db795e3b8c1.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/mercedes-benz-cla-200-uzywany-2023-benzyna-niebieski-naped-przod-kombi-mazowieckie-mercedes-benz-autotorino-warszawa-005403144"
+  },
   "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12": {
     "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-12",
-    "title": "AudiA4 Allroad quattro 45 TFSI 195(265) kW(KM) S tronic",
-    "price": 127900,
-    "year": 2023,
-    "brand": "Audi",
-    "model": "A4 Allroad",
-    "image": "https://carapi.activemotors.pl/photo/2170451/b95a5bc60eb08714.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a4-allroad-uzywany-2023-benzyna-niebieski-naped-4x4-kombi-zachodniopomorskie-audi-szczecin-050759554"
-  },
-  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13",
     "title": "Mercedes-BenzB 200 AMG Line",
     "price": 127900,
     "year": 2024,
@@ -738,6 +728,16 @@
     "model": "B 200",
     "image": "https://carapi.activemotors.pl/photo/2212885/e6c91f3f8072321f.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/mercedes-benz-b-200-uzywany-2024-benzyna-czarny-naped-przod-kompakt-mazowieckie-mercedes-benz-autotorino-warszawa-099136188"
+  },
+  "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-13",
+    "title": "AudiA4 Allroad quattro 45 TFSI 195(265) kW(KM) S tronic",
+    "price": 127900,
+    "year": 2023,
+    "brand": "Audi",
+    "model": "A4 Allroad",
+    "image": "https://carapi.activemotors.pl/photo/2170451/b95a5bc60eb08714.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a4-allroad-uzywany-2023-benzyna-niebieski-naped-4x4-kombi-zachodniopomorskie-audi-szczecin-050759554"
   },
   "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-14": {
     "url": "https://findcar.pl/znajdz-samochod/5?makes=lexus,audi,bmw,mercedes-benz&fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150#offer-14",
@@ -7632,16 +7632,6 @@
   "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-13": {
     "url": "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-13",
     "title": "Lexus RX",
-    "price": 289900,
-    "year": 2025,
-    "brand": "Lexus",
-    "model": "RX",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/076htz7825if3-OTOMOTOPL/image;s=644x461",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/lexus-rx-ID6I6T3P.html"
-  },
-  "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-14": {
-    "url": "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-14",
-    "title": "Lexus RX",
     "price": 279777,
     "year": 2023,
     "brand": "Lexus",
@@ -7649,8 +7639,8 @@
     "image": "https://ireland.apollo.olxcdn.com/v1/files/thupczidt76v3-OTOMOTOPL/image;s=320x240",
     "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/lexus-rx-ID6IeHrA.html"
   },
-  "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-15": {
-    "url": "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-15",
+  "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-14": {
+    "url": "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-14",
     "title": "Lexus LBX 1.5 Hybrid Elegant",
     "price": 141900,
     "year": 2025,
@@ -7658,6 +7648,16 @@
     "model": "LBX",
     "image": "https://ireland.apollo.olxcdn.com/v1/files/5zrfubv8ir4g2-OTOMOTOPL/image;s=644x461",
     "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/lexus-lbx-ID6IeJf9.html"
+  },
+  "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-15": {
+    "url": "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-15",
+    "title": "Lexus RX",
+    "price": 289900,
+    "year": 2025,
+    "brand": "Lexus",
+    "model": "RX",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/076htz7825if3-OTOMOTOPL/image;s=644x461",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/lexus-rx-ID6I6T3P.html"
   },
   "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-16": {
     "url": "https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol#offer-16",
