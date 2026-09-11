@@ -1,10 +1,12 @@
 # Jeden URL na linię. Linie zaczynające się od "#" są ignorowane.
+# otomoto
 https://www.otomoto.pl/osobowe/audi/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_damaged%5D=0&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol&search%5Bfilter_float_engine_power%3Afrom%5D=170
 https://www.otomoto.pl/osobowe/bmw/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_damaged%5D=0&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol&search%5Bfilter_float_engine_power%3Afrom%5D=170&search%5Border%5D=filter_float_price%3Adesc
 https://www.otomoto.pl/osobowe/mercedes-benz/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_damaged%5D=0&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol&search%5Bfilter_float_engine_power%3Afrom%5D=170&search%5Border%5D=filter_float_price%3Adesc
 https://www.otomoto.pl/osobowe/lexus/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_damaged%5D=0&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol&search%5Bfilter_float_engine_power%3Afrom%5D=170&search%5Border%5D=filter_float_price%3Adesc
 https://www.otomoto.pl/osobowe/toyota/od-2023?search%5Bfilter_enum_cruisecontrol_type%5D%5B0%5D=adaptive-cruise-control&search%5Bfilter_enum_cruisecontrol_type%5D%5B1%5D=adaptive-cruise-control-predictive&search%5Bfilter_enum_damaged%5D=0&search%5Bfilter_enum_fuel_type%5D%5B0%5D=hybrid&search%5Bfilter_enum_fuel_type%5D%5B1%5D=petrol&search%5Bfilter_float_engine_power%3Afrom%5D=170&search%5Border%5D=filter_float_price%3Adesc
 #
+# findcar
 https://findcar.pl/znajdz-samochod?fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150&makes=audi
 https://findcar.pl/znajdz-samochod?fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150&makes=bmw
 https://findcar.pl/znajdz-samochod?fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150&makes=mercedes-benz
