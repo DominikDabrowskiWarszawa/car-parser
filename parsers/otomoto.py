@@ -15,6 +15,19 @@ na żywym HTML-u (devtools -> Elements) i w razie potrzeby skorygować -
 strona mogła się zmienić od czasu napisania tego kodu. Kod jest napisany
 tak, żeby literały selektorów były w jednym miejscu i łatwo je było
 podmienić.
+
+MARKA / MODEL - skąd się biorą:
+Tytuły ogłoszeń na otomoto to DOWOLNY tekst wpisany przez sprzedającego
+(np. "AMG GT R 585 KM | Vossen | Ceramika" albo "1.5 T-GDI Super Hybrid
+Prestige" - bez marki na początku!), więc zgadywanie marki/modelu z
+tytułu jest z natury zawodne. Dużo bardziej wiarygodny jest slug w URL-u
+KONKRETNEJ oferty (np. ".../oferta/toyota-rav4-ID6I8Kuo.html"), bo ten
+jest generowany programowo przez samo otomoto z jego wewnętrznej
+taksonomii marka/model - niezależnie od tego, co sprzedający wpisał w
+tytule. Dlatego markę/model wyciągamy WYŁĄCZNIE z tego sluga (patrz
+_brand_model_from_offer_slug), zarówno dla wyszukiwań jednomarkowych, jak
+i wielomarkowych (np. /osobowe/audi--bmw--lexus--mercedes-benz/od-2023 -
+marki rozdzielone podwójnym myślnikiem).
 """
 
 from __future__ import annotations
@@ -39,55 +52,85 @@ _GALLERY_SELECTOR = (
     '[data-testid="gallery"] img, [data-testid="photo-gallery"] img, '
     '.gallery img, [class*="gallery"] img'
 )
-# Segmenty ścieżki URL, które NIE są nazwą modelu, mimo że siedzą na tej
-# samej pozycji co model w typowym /osobowe/<marka>/<model> - najczęściej
-# to filtr statusu (nowe/uzywane) albo filtr rocznika (od-2023, do-2023),
-# używany przy szerszych wyszukiwaniach typu "wszystkie Lexusy od 2023".
-_NON_MODEL_SEGMENT_RE = re.compile(r"^(nowe|uzywane|od-\d{4}|do-\d{4})$")
 # ---------------------------------------------------------------------------
 
+# Segmenty ścieżki URL wyszukiwania, które NIE są marką/modelem, mimo że
+# siedzą na tej samej pozycji co one w typowym /osobowe/<marka>/<model> -
+# to filtr statusu (nowe/uzywane) albo filtr rocznika (od-2023, do-2023).
+_NON_BRAND_SEGMENT_RE = re.compile(r"^(nowe|uzywane|od-\d{4}|do-\d{4})$")
 
-def _guess_model_from_title(title: str | None, brand: str | None) -> str | None:
+# Slug KONKRETNEJ oferty, np. .../oferta/toyota-rav4-ID6I8Kuo.html
+_OFFER_SLUG_RE = re.compile(r"/oferta/([a-z0-9-]+)-ID[0-9A-Za-z]+\.html", re.IGNORECASE)
+
+# Marki dwuczłonowe (myślnik w slugu) - używane jako podpowiedź przy
+# dopasowywaniu marki ze slug-a oferty, żeby np. "mercedes-benz-glc-..."
+# nie rozjechało się na markę "Mercedes" + model "Benz". Lista niepełna -
+# dopisuj kolejne w miarę napotykania błędnych przypadków.
+_KNOWN_MULTI_WORD_BRAND_SLUGS = {
+    "mercedes-benz", "land-rover", "alfa-romeo", "aston-martin", "rolls-royce",
+}
+_MAX_MODEL_SEGMENTS = 2
+
+
+def _known_brand_slugs_from_search_url(url: str) -> set[str]:
     """
-    Fallback, gdy w URL-u wyszukiwania nie ma konkretnego modelu (np.
-    "/osobowe/lexus/od-2023" przeszukuje WSZYSTKIE modele Lexusa naraz).
-    Zgaduje model z tytułu konkretnej oferty, np. "Lexus NX 350h Prestige
-    AWD" -> "NX", pomijając na początku tyle słów, ile ma sama nazwa marki
-    (żeby poprawnie obsłużyć marki dwuczłonowe jak "Land Rover").
+    Wyciąga zbiór slugów marek z URL-a WYSZUKIWANIA (nie pojedynczej oferty), np.:
+      /osobowe/lexus/od-2023                              -> {'lexus'}
+      /osobowe/audi--bmw--lexus--mercedes-benz/od-2023     -> {'audi','bmw','lexus','mercedes-benz'}
 
-    Modele wieloczłonowe (np. "Seria 1", "Klasa C") są też obsłużone: jeśli
-    drugie słowo po marce jest krótkie (<=2 znaki - liczba albo pojedyncza
-    litera), doklejamy je do modelu.
-
-    To uproszczona heurystyka - dla nietypowych tytułów może się mylić, ale
-    jest lepsza niż zostawienie modelu pustym.
+    Marki wielokrotne są rozdzielone PODWÓJNYM myślnikiem "--" (w
+    odróżnieniu od pojedynczego myślnika używanego wewnątrz nazwy marki,
+    np. "mercedes-benz"). Używane jako podpowiedź przy dopasowywaniu marki
+    ze slug-a KONKRETNEJ oferty (patrz _brand_model_from_offer_slug).
     """
-    if not title:
-        return None
-    tokens = title.split()
-    if not tokens:
-        return None
+    path_parts = [p for p in urlparse(url).path.split("/") if p]
+    try:
+        start = path_parts.index("osobowe") + 1
+    except ValueError:
+        return set()
 
-    if brand:
-        brand_tokens = brand.split()
-        n = len(brand_tokens)
-        if len(tokens) > n and all(
-            tokens[i].lower() == brand_tokens[i].lower() for i in range(n)
-        ):
-            remaining = tokens[n:]
-        else:
-            remaining = tokens[1:] if len(tokens) > 1 else []
-    else:
-        remaining = tokens[1:] if len(tokens) > 1 else []
+    for seg in path_parts[start:]:
+        if _NON_BRAND_SEGMENT_RE.match(seg):
+            continue
+        if "--" in seg:
+            return {s for s in seg.split("--") if s}
+        return {seg}
+    return set()
 
-    if not remaining:
-        return None
 
-    model_tokens = [remaining[0]]
-    if len(remaining) > 1 and len(remaining[1]) <= 2 and remaining[1].isalnum():
-        model_tokens.append(remaining[1])
+def _brand_model_from_offer_slug(offer_url: str | None, known_brand_slugs: set[str]) -> dict:
+    """
+    Wyciąga markę/model ze sluga KONKRETNEJ oferty, np.:
+      .../oferta/toyota-rav4-ID6I8Kuo.html      -> brand='Toyota', model='RAV4'
+      .../oferta/mercedes-benz-glc-ID6xYz.html  -> brand='Mercedes-Benz', model='GLC'
 
-    return " ".join(model_tokens)
+    Najpierw próbuje dopasować NAJDŁUŻSZY prefiks z `known_brand_slugs`
+    (połączenie podpowiedzi z URL-a wyszukiwania i statycznej listy marek
+    dwuczłonowych) - to poprawnie obsługuje marki dwuczłonowe. Bez
+    dopasowania zakłada markę jednosegmentową (pierwszy segment sluga).
+    """
+    match = _OFFER_SLUG_RE.search(offer_url or "")
+    if not match:
+        return {"brand": None, "model": None}
+
+    segments = match.group(1).split("-")
+    if not segments:
+        return {"brand": None, "model": None}
+
+    all_known = known_brand_slugs | _KNOWN_MULTI_WORD_BRAND_SLUGS
+    brand_slug = segments[0]
+    brand_len = 1
+    for candidate in sorted(all_known, key=len, reverse=True):
+        candidate_segments = candidate.split("-")
+        n = len(candidate_segments)
+        if segments[:n] == candidate_segments:
+            brand_slug = candidate
+            brand_len = n
+            break
+
+    model_segments = segments[brand_len:brand_len + _MAX_MODEL_SEGMENTS]
+    model = format_model_name("-".join(model_segments)) if model_segments else None
+    return {"brand": slug_to_name(brand_slug), "model": model}
 
 
 class OtomotoParser(SiteParser):
@@ -99,7 +142,7 @@ class OtomotoParser(SiteParser):
         return "/oferta/" not in path
 
     # ------------------------------------------------------------------ #
-    # LISTING (np. /osobowe/nowe/toyota/rav4, /osobowe/bmw/x3/od-2024)
+    # LISTING (np. /osobowe/nowe/toyota/rav4, /osobowe/audi--bmw--lexus--mercedes-benz/od-2023)
     # ------------------------------------------------------------------ #
     def parse_listing(self, html: str, url: str) -> list[Offer]:
         soup = BeautifulSoup(html, "html.parser")
@@ -112,6 +155,8 @@ class OtomotoParser(SiteParser):
 
     def _offers_from_json_ld(self, soup: BeautifulSoup, url: str) -> list[Offer]:
         offers: list[Offer] = []
+        known_brand_slugs = _known_brand_slugs_from_search_url(url)
+
         for script in soup.find_all("script", {"type": "application/ld+json"}):
             try:
                 data = json.loads(script.string or "")
@@ -135,9 +180,7 @@ class OtomotoParser(SiteParser):
                 if isinstance(image, list):
                     image = image[0] if image else None
 
-                bm = self._brand_model_from_url(url)
-                if not bm.get("model"):
-                    bm["model"] = _guess_model_from_title(clean_text(name), bm.get("brand"))
+                bm = _brand_model_from_offer_slug(offer_url, known_brand_slugs)
 
                 offers.append(
                     Offer(
@@ -154,6 +197,7 @@ class OtomotoParser(SiteParser):
     def _offers_from_cards(self, soup: BeautifulSoup, url: str) -> list[Offer]:
         offers: list[Offer] = []
         cards = soup.select(_CARD_SELECTOR)
+        known_brand_slugs = _known_brand_slugs_from_search_url(url)
         idx = 0
         for card in cards:
             title_el = card.select_one(_TITLE_SELECTOR)
@@ -173,9 +217,7 @@ class OtomotoParser(SiteParser):
             image_el = card.select_one(_CARD_IMAGE_SELECTOR)
             image = extract_image_url(image_el, url)
 
-            brand_model = self._brand_model_from_url(url)
-            if not brand_model.get("model"):
-                brand_model["model"] = _guess_model_from_title(title, brand_model.get("brand"))
+            brand_model = _brand_model_from_offer_slug(offer_url, known_brand_slugs)
 
             offers.append(
                 Offer(
@@ -229,6 +271,10 @@ class OtomotoParser(SiteParser):
             if og_image and og_image.get("content"):
                 images = [og_image["content"]]
 
+        # tu `url` JEST już adresem konkretnej oferty - nie ma potrzeby
+        # podpowiedzi z URL-a wyszukiwania, tylko statyczna lista marek dwuczłonowych
+        bm = _brand_model_from_offer_slug(url, set())
+
         return Offer(
             url=url,
             title=title,
@@ -236,39 +282,5 @@ class OtomotoParser(SiteParser):
             year=year,
             image=images[0] if images else None,
             extra={"images": images} if len(images) > 1 else {},
-            **self._brand_model_from_url_with_title_fallback(url, title),
+            **bm,
         )
-
-    # ------------------------------------------------------------------ #
-    # ------------------------------------------------------------------ #
-    def _brand_model_from_url_with_title_fallback(self, url: str, title: str | None) -> dict:
-        bm = self._brand_model_from_url(url)
-        if not bm.get("model"):
-            bm["model"] = _guess_model_from_title(title, bm.get("brand"))
-        return bm
-
-    @staticmethod
-    def _brand_model_from_url(url: str) -> dict:
-        """
-        otomoto trzyma markę/model w samej ścieżce URL, np.:
-          /osobowe/nowe/toyota/rav4
-          /osobowe/bmw/x3/od-2024
-        Format: /osobowe/[nowe|uzywane/]<marka>/<model>[/...]
-
-        UWAGA: przy szerszych wyszukiwaniach (np. /osobowe/lexus/od-2023 -
-        wszystkie modele Lexusa nowsze niż 2023) w ścieżce w ogóle nie ma
-        segmentu modelu - jest tylko filtr roku (`od-2023` / `do-2023`).
-        Odróżniamy to od nazwy modelu wzorcem `_NON_MODEL_SEGMENT_RE` poniżej,
-        żeby nie wpisać np. "OD 2023" jako model.
-        """
-        path_parts = [p for p in urlparse(url).path.split("/") if p]
-        try:
-            start = path_parts.index("osobowe") + 1
-        except ValueError:
-            return {"brand": None, "model": None}
-
-        remaining = [p for p in path_parts[start:] if not _NON_MODEL_SEGMENT_RE.match(p)]
-
-        brand = slug_to_name(remaining[0]) if len(remaining) > 0 else None
-        model = format_model_name(remaining[1]) if len(remaining) > 1 else None
-        return {"brand": brand, "model": model}

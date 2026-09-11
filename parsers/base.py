@@ -11,6 +11,9 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Optional
+from urllib.parse import urljoin
+
+from bs4 import BeautifulSoup
 
 
 @dataclass
@@ -75,3 +78,31 @@ class SiteParser(ABC):
         if self.is_listing_url(url):
             return self.parse_listing(html, url)
         return [self.parse_single(html, url)]
+
+    def get_next_page_url(self, html: str, url: str) -> Optional[str]:
+        """
+        Zwraca URL następnej strony wyników, albo None jeśli to ostatnia strona
+        (albo strona nie ma paginacji, np. pojedyncza oferta).
+
+        Domyślna implementacja jest generyczna i celowo NIE zgaduje numeru
+        strony z samego URL-a (żeby nie zapętlić się w nieskończoność, gdyby
+        strona nie miała już więcej wyników) - szuka rzeczywistego linku
+        "Następna" / rel="next" w wyrenderowanym HTML-u. Jeśli dana domena
+        renderuje paginację inaczej, przeciąż tę metodę w swoim parserze.
+        """
+        soup = BeautifulSoup(html, "html.parser")
+
+        next_link = soup.select_one('a[rel="next"]')
+        if not next_link:
+            for a in soup.find_all("a", href=True):
+                text = (a.get_text() or "").strip().lower()
+                if text in ("następna", "nastepna", "next", ">", "»"):
+                    next_link = a
+                    break
+
+        if not next_link or not next_link.get("href"):
+            return None
+
+        href = next_link["href"]
+        next_url = href if href.startswith("http") else urljoin(url, href)
+        return next_url if next_url != url else None
