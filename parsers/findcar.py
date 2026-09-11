@@ -21,7 +21,7 @@ jednego takiego linku) i z tego kontenera wyciągamy cenę / rok / itd.
 from __future__ import annotations
 
 import re
-from urllib.parse import parse_qs, unquote, urlparse
+from urllib.parse import parse_qs, unquote, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
 
@@ -44,6 +44,19 @@ _PHOTO_SRC_RE = re.compile(r"/thumb\?src=", re.IGNORECASE)
 _KNOWN_MULTI_WORD_BRAND_SLUGS = {
     "mercedes-benz", "land-rover", "alfa-romeo", "aston-martin", "rolls-royce",
 }
+# findcar koduje numer strony wyników jako segment ŚCIEŻKI, np.:
+#   /znajdz-samochod            -> strona 1
+#   /znajdz-samochod/2?makes=.. -> strona 2
+# (reszta query stringu zostaje identyczna). Dzięki temu możemy zbudować
+# URL kolejnej strony samodzielnie, zamiast polegać na znalezieniu
+# wyrenderowanego linku "Następna" w HTML-u (patrz get_next_page_url niżej -
+# to bardziej odporne niż dopasowywanie tekstu linku, które może zawieść
+# przy dodatkowych ikonach czy różnicach w kodowaniu Unicode).
+_PAGE_PATH_RE = re.compile(r"^/znajdz-samochod(?:/(\d+))?/?$")
+# "Znaleziono 1750 aut" - deklarowana przez stronę łączna liczba wyników,
+# używana WYŁĄCZNIE do diagnostyki/logowania (porównanie z faktycznie
+# zebraną liczbą ofert), nie do sterowania pętlą paginacji.
+_TOTAL_COUNT_RE = re.compile(r"Znaleziono\s+([\d\s\u00A0]+)\s+aut", re.IGNORECASE)
 # Segmenty sluga, które sygnalizują KONIEC nazwy modelu (a nie są jej częścią) -
 # status oferty, paliwo, napęd itp. Gdy trafimy na jeden z nich (albo na
 # 4-cyfrowy rok), przestajemy zbierać kolejne segmenty jako model. Dzięki
@@ -114,6 +127,37 @@ class FindCarParser(SiteParser):
 
     def is_listing_url(self, url: str) -> bool:
         return "/oferty-dealerow/" not in urlparse(url).path
+
+    def get_next_page_url(self, html: str, url: str) -> str | None:
+        """
+        Zamiast szukać linku "Następna" w HTML-u (patrz uzasadnienie w
+        base.py - dopasowanie tekstu bywa kruche), BUDUJEMY URL kolejnej
+        strony bezpośrednio: findcar koduje numer strony jako segment
+        ścieżki (/znajdz-samochod/N?...), więc wystarczy go odczytać i
+        zinkrementować - reszta query stringu zostaje identyczna.
+
+        Nie sprawdzamy tu, czy "kolejna strona istnieje" - to i tak robi
+        main.py (pętla zatrzymuje się, gdy strona nie zwraca już żadnych
+        ofert). Jeśli URL nie pasuje do oczekiwanego wzorca ścieżki (np.
+        findcar kiedyś zmieni strukturę), zwracamy None, żeby nie zgadywać
+        na ślepo.
+        """
+        parsed = urlparse(url)
+        match = _PAGE_PATH_RE.match(parsed.path)
+        if not match:
+            return None
+
+        current_page = int(match.group(1)) if match.group(1) else 1
+        next_path = f"/znajdz-samochod/{current_page + 1}"
+        return urlunparse(parsed._replace(path=next_path))
+
+    def extract_total_count(self, html: str) -> int | None:
+        """Czyta deklarowaną przez stronę liczbę wyników ('Znaleziono X aut') - do diagnostyki w logach."""
+        match = _TOTAL_COUNT_RE.search(html)
+        if not match:
+            return None
+        digits = re.sub(r"[^\d]", "", match.group(1))
+        return int(digits) if digits else None
 
     # ------------------------------------------------------------------ #
     # LISTING (np. /znajdz-samochod?makes=lexus&models=es)

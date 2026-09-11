@@ -121,3 +121,13 @@ class SiteParser(ABC):
         href = next_link["href"]
         next_url = href if href.startswith("http") else urljoin(url, href)
         return next_url if next_url != url else None
+
+    def extract_total_count(self, html: str) -> Optional[int]:
+        """
+        Opcjonalnie: łączna liczba wyników zadeklarowana przez stronę (np.
+        "Znaleziono 1750 aut"), używana WYŁĄCZNIE do diagnostyki w logach
+        (main.py porównuje ją z faktycznie zebraną liczbą ofert) - nie do
+        sterowania pętlą paginacji. Domyślnie nieobsługiwane; przeciąż w
+        konkretnym parserze, jeśli domena to udostępnia.
+        """
+        return None
