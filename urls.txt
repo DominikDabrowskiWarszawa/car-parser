@@ -1,12 +1,12 @@
 # Jeden URL na linię. Linie zaczynające się od "#" są ignorowane.
 # otomoto
-https://www.otomoto.pl/osobowe/nowe/audi?search%5Bfilter_float_price%3Ato%5D=300000&search%5Border%5D=filter_float_price%3Adesc
-https://www.otomoto.pl/osobowe/nowe/bmw?search%5Bfilter_float_price%3Ato%5D=300000&search%5Border%5D=filter_float_price%3Adesc
-https://www.otomoto.pl/osobowe/nowe/lexus?search%5Bfilter_float_price%3Ato%5D=300000&search%5Border%5D=filter_float_price%3Adesc
-https://www.otomoto.pl/osobowe/nowe/toyota?search%5Bfilter_float_price%3Ato%5D=300000&search%5Border%5D=filter_float_price%3Adesc
+https://www.otomoto.pl/osobowe/nowe/audi/a5-limousine--q3--q3-sportback--q5--q5-sportback?search%5Bfilter_float_price%3Ato%5D=300000&search%5Bmake_model_generation%5D%5B0%5D=audi%7Ca5-limousine&search%5Bmake_model_generation%5D%5B1%5D=audi%7Cq3&search%5Bmake_model_generation%5D%5B2%5D=audi%7Cq3-sportback&search%5Bmake_model_generation%5D%5B3%5D=audi%7Cq5&search%5Bmake_model_generation%5D%5B4%5D=audi%7Cq5-sportback&search%5Border%5D=filter_float_price%3Adesc
+https://www.otomoto.pl/osobowe/nowe/bmw/seria-3--seria-4--seria-5--x1--x3--x3-m--x5--x5-m?search%5Bfilter_float_price%3Ato%5D=300000&search%5Bmake_model_generation%5D%5B0%5D=bmw%7Cseria-3&search%5Bmake_model_generation%5D%5B1%5D=bmw%7Cseria-4&search%5Bmake_model_generation%5D%5B2%5D=bmw%7Cseria-5&search%5Bmake_model_generation%5D%5B3%5D=bmw%7Cx1&search%5Bmake_model_generation%5D%5B4%5D=bmw%7Cx3&search%5Bmake_model_generation%5D%5B5%5D=bmw%7Cx3-m&search%5Bmake_model_generation%5D%5B6%5D=bmw%7Cx5&search%5Bmake_model_generation%5D%5B7%5D=bmw%7Cx5-m&search%5Border%5D=filter_float_price%3Adesc
+https://www.otomoto.pl/osobowe/nowe/lexus/es--nx?search%5Bfilter_float_price%3Ato%5D=300000&search%5Bmake_model_generation%5D%5B0%5D=lexus%7Ces&search%5Bmake_model_generation%5D%5B1%5D=lexus%7Cnx&search%5Border%5D=filter_float_price%3Adesc
+https://www.otomoto.pl/osobowe/nowe/toyota/camry--rav4?search%5Bfilter_float_price%3Ato%5D=300000&search%5Bmake_model_generation%5D%5B0%5D=toyota%7Ccamry&search%5Bmake_model_generation%5D%5B1%5D=toyota%7Crav4&search%5Border%5D=filter_float_price%3Adesc
 #
 # findcar
-https://findcar.pl/znajdz-samochod?fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150&makes=audi
-https://findcar.pl/znajdz-samochod?fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150&makes=bmw
-https://findcar.pl/znajdz-samochod?fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150&makes=lexus
-https://findcar.pl/znajdz-samochod?fuelTypes=petrol,hybrid_hev&sort=price,asc&yearMin=2023&powerMin=150&makes=toyota
+https://findcar.pl/znajdz-samochod?makes=audi&priceMax=300000&models=a5,q3,q5,a6&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
+https://findcar.pl/znajdz-samochod?makes=bmw&priceMax=300000&models=seria-3,seria-4,seria-5,x1,x3&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
+https://findcar.pl/znajdz-samochod?makes=lexus&priceMax=300000&models=es,nx&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
+https://findcar.pl/znajdz-samochod?makes=toyota&priceMax=300000&models=camry&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
