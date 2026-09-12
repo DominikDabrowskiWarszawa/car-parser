@@ -213,6 +213,13 @@ def main(argv: list[str] | None = None) -> int:
         default=1.0,
         help="Pauza w sekundach między kolejnymi stronami paginacji (domyślnie 1.0)",
     )
+    parser.add_argument(
+        "--price-change-threshold",
+        type=float,
+        default=0.0,
+        help="Minimalna procentowa zmiana ceny, żeby wysłać powiadomienie push "
+             "(np. 10 = tylko zmiany >= 10%%). Domyślnie 0 - powiadamia o każdej zmianie.",
+    )
     args = parser.parse_args(argv)
 
     urls = list(args.urls)
@@ -239,9 +246,9 @@ def main(argv: list[str] | None = None) -> int:
 
     changes = detect_price_changes(previous_state, state)
     for old_offer, new_offer in changes:
-        notify_price_change(old_offer, new_offer)
+        notify_price_change(old_offer, new_offer, min_change_pct=args.price_change_threshold)
     if changes:
-        logger.info("Wykryto %d zmian(y) ceny - wysłano powiadomienia.", len(changes))
+        logger.info("Wykryto %d zmian(y) ceny (przetworzono, próg powiadomień: %.1f%%).", len(changes), args.price_change_threshold)
 
     save_state(args.output, state)
     logger.info("Zapisano %s (łącznie %d wpisów, %d w tym przebiegu).", args.output, len(state), total)
