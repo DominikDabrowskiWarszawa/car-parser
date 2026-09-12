@@ -6,7 +6,7 @@ https://www.otomoto.pl/osobowe/nowe/lexus/es--nx?search%5Bfilter_float_price%3At
 https://www.otomoto.pl/osobowe/nowe/toyota/camry--rav4?search%5Bfilter_float_price%3Ato%5D=275000&search%5Bmake_model_generation%5D%5B0%5D=toyota%7Ccamry&search%5Bmake_model_generation%5D%5B1%5D=toyota%7Crav4&search%5Border%5D=filter_float_price%3Adesc
 #
 # findcar
-https://findcar.pl/znajdz-samochod?makes=audi&priceMax=275000&models=a5,q3,q5,a6&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
-https://findcar.pl/znajdz-samochod?makes=bmw&priceMax=275000&models=seria-3,seria-4,seria-5,x1,x3&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
-https://findcar.pl/znajdz-samochod?makes=lexus&priceMax=275000&models=es,nx&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
-https://findcar.pl/znajdz-samochod?makes=toyota&priceMax=275000&models=camry&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev
+https://findcar.pl/znajdz-samochod?makes=audi&priceMax=275000&models=a5,q3,q5,a6&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev&size=45
+https://findcar.pl/znajdz-samochod?makes=bmw&priceMax=275000&models=seria-3,seria-4,seria-5,x1,x3&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev&size=45
+https://findcar.pl/znajdz-samochod?makes=lexus&priceMax=275000&models=es,nx&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev&size=45
+https://findcar.pl/znajdz-samochod?makes=toyota&priceMax=275000&models=camry&conditions=vehicle_new&fuelTypes=petrol,hybrid_hev&size=45
