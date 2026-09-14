@@ -62,6 +62,13 @@ def parse_year(raw: str | None) -> int | None:
     return int(match.group(0)) if match else None
 
 
+def pct_change(old_value: float, new_value: float) -> float | None:
+    """Procentowa zmiana wartości, np. pct_change(100000, 90000) -> -10.0. None jeśli old_value=0."""
+    if not old_value:
+        return None
+    return (new_value - old_value) / old_value * 100
+
+
 def slug_to_name(slug: str) -> str:
     """
     np. 'mercedes-benz' -> 'Mercedes-Benz', 'bmw' -> 'BMW'.

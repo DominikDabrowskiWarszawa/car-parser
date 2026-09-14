@@ -18,6 +18,8 @@ import os
 
 import requests
 
+from utils.text import pct_change
+
 logger = logging.getLogger(__name__)
 
 
@@ -73,12 +75,12 @@ def notify_price_change(old_offer: dict, new_offer: dict, min_change_pct: float 
         return
 
     diff = new_price - old_price
-    pct_change = abs(diff) / old_price * 100 if old_price else 0.0
+    pct = abs(pct_change(old_price, new_price) or 0.0)
 
-    if pct_change < min_change_pct:
+    if pct < min_change_pct:
         logger.info(
             "Pominięto powiadomienie (zmiana %.1f%% < progu %.1f%%): %s -> %s",
-            pct_change, min_change_pct, old_price, new_price,
+            pct, min_change_pct, old_price, new_price,
         )
         return
 
@@ -92,7 +94,7 @@ def notify_price_change(old_offer: dict, new_offer: dict, min_change_pct: float 
     title = f"{arrow} {direction} ceny: {car_name}"
     message = (
         f"{_fmt_price(old_price)} PLN -> {_fmt_price(new_price)} PLN "
-        f"({'+' if diff > 0 else ''}{_fmt_price(diff)} PLN, {pct_change:.1f}%)\n"
+        f"({'+' if diff > 0 else ''}{_fmt_price(diff)} PLN, {pct:.1f}%)\n"
         f"{new_offer.get('source_offer_url') or new_offer.get('url')}"
     )
 
