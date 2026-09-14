@@ -31,6 +31,7 @@ from pathlib import Path
 from parsers.registry import NoParserFoundError, get_parser_for_url
 from utils.http import fetch_html
 from utils.notify import notify_price_change
+from utils.text import pct_change
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -269,10 +270,32 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     changes = detect_price_changes(previous_state, state)
+
+    # Czyścimy adnotacje o zmianie ceny z POPRZEDNIEGO przebiegu (żeby nie
+    # zostawały "wiszące" na ofertach, których cena akurat teraz się nie
+    # zmieniła), a potem dopisujemy świeże - dla KAŻDEJ wykrytej zmiany,
+    # niezależnie od tego, czy przekroczyła --price-change-threshold. Dzięki
+    # temu widać w samym state.json, o ile realnie zmieniła się cena, nawet
+    # jeśli akurat nie wygenerowało to powiadomienia push.
+    for offer in state.values():
+        offer.pop("previous_price", None)
+        offer.pop("price_change_amount", None)
+        offer.pop("price_change_pct", None)
+
     for old_offer, new_offer in changes:
+        old_price = old_offer.get("price")
+        new_price = new_offer.get("price")
+        new_offer["previous_price"] = old_price
+        new_offer["price_change_amount"] = new_price - old_price
+        pct = pct_change(old_price, new_price)
+        new_offer["price_change_pct"] = round(pct, 1) if pct is not None else None
         notify_price_change(old_offer, new_offer, min_change_pct=args.price_change_threshold)
+
     if changes:
-        logger.info("Wykryto %d zmian(y) ceny (przetworzono, próg powiadomień: %.1f%%).", len(changes), args.price_change_threshold)
+        logger.info(
+            "Wykryto %d zmian(y) ceny (próg powiadomień: %.1f%%).",
+            len(changes), args.price_change_threshold,
+        )
 
     save_state(args.output, state)
     logger.info("Zapisano %s (łącznie %d wpisów, %d w tym przebiegu).", args.output, len(state), total)
