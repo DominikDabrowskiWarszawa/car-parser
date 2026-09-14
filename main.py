@@ -147,10 +147,34 @@ def read_urls_from_file(path: Path) -> list[str]:
 
 
 def detect_price_changes(old_state: dict, new_state: dict) -> list[tuple[dict, dict]]:
-    """Zwraca pary (stara_oferta, nowa_oferta) dla wpisów, gdzie cena się zmieniła."""
+    """
+    Zwraca pary (stara_oferta, nowa_oferta) dla OFERT (nie kluczy state.json!),
+    gdzie cena się zmieniła.
+
+    Porównanie odbywa się po TOŻSAMOŚCI oferty (source_offer_url - a dla
+    wpisów pojedynczej oferty, gdzie go nie ma, po samym url), a NIE po
+    pozycyjnym kluczu w state.json ("{search_url}#offer-N"). Klucz pozycyjny
+    może się zmienić między przebiegami przy niestabilnym sortowaniu strony
+    źródłowej (patrz deduplicate_by_offer_identity) - porównywanie po samym
+    kluczu ryzykowałoby albo pominięcie realnej zmiany ceny (ta sama oferta
+    pod innym kluczem), albo fałszywy alarm (dwie RÓŻNE oferty przypadkiem
+    pod tym samym kluczem w dwóch różnych przebiegach).
+    """
+
+    def identity(offer: dict) -> str | None:
+        return offer.get("source_offer_url") or offer.get("url")
+
+    old_by_identity = {identity(o): o for o in old_state.values() if identity(o)}
+
     changes = []
-    for key, new_offer in new_state.items():
-        old_offer = old_state.get(key)
+    seen: set[str] = set()
+    for new_offer in new_state.values():
+        ident = identity(new_offer)
+        if not ident or ident in seen:
+            continue
+        seen.add(ident)
+
+        old_offer = old_by_identity.get(ident)
         if not old_offer:
             continue  # nowa oferta, nie "zmiana ceny" - pomijamy zgodnie z wymaganiem
         old_price = old_offer.get("price")
