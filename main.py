@@ -147,6 +147,16 @@ def read_urls_from_file(path: Path) -> list[str]:
     return [line.strip() for line in lines if line.strip() and not line.strip().startswith("#")]
 
 
+def offer_identity(offer: dict) -> str | None:
+    """
+    Tożsamość oferty do porównań między przebiegami: source_offer_url (dla
+    wpisów z listingu), a dla wpisów pojedynczej oferty (gdzie go nie ma) -
+    sam url. Używana zarówno do wykrywania zmian ceny, jak i oznaczania
+    nowych ofert - patrz detect_price_changes i mark_new_offers.
+    """
+    return offer.get("source_offer_url") or offer.get("url")
+
+
 def detect_price_changes(old_state: dict, new_state: dict) -> list[tuple[dict, dict]]:
     """
     Zwraca pary (stara_oferta, nowa_oferta) dla OFERT (nie kluczy state.json!),
@@ -161,16 +171,12 @@ def detect_price_changes(old_state: dict, new_state: dict) -> list[tuple[dict, d
     pod innym kluczem), albo fałszywy alarm (dwie RÓŻNE oferty przypadkiem
     pod tym samym kluczem w dwóch różnych przebiegach).
     """
-
-    def identity(offer: dict) -> str | None:
-        return offer.get("source_offer_url") or offer.get("url")
-
-    old_by_identity = {identity(o): o for o in old_state.values() if identity(o)}
+    old_by_identity = {offer_identity(o): o for o in old_state.values() if offer_identity(o)}
 
     changes = []
     seen: set[str] = set()
     for new_offer in new_state.values():
-        ident = identity(new_offer)
+        ident = offer_identity(new_offer)
         if not ident or ident in seen:
             continue
         seen.add(ident)
@@ -183,6 +189,39 @@ def detect_price_changes(old_state: dict, new_state: dict) -> list[tuple[dict, d
         if old_price is not None and new_price is not None and old_price != new_price:
             changes.append((old_offer, new_offer))
     return changes
+
+
+def mark_new_offers(previous_state: dict, state: dict) -> int:
+    """
+    Ustawia pole `is_new` na KAŻDEJ ofercie w `state` (mutacja w miejscu -
+    dlatego zawsze nadpisuje, nigdy nie zostają nieaktualne wartości z
+    poprzedniego przebiegu).
+
+    Jeśli `previous_state` jest puste (pierwsze uruchomienie w ogóle, albo
+    świeże po --fresh - brak jakiegokolwiek wcześniejszego punktu
+    odniesienia), WSZYSTKIE oferty dostają `is_new = False`. To budowanie
+    początkowego katalogu, nie "nowe ogłoszenia" w sensie użytkowym - nie
+    ma z czym ich porównać, więc oznaczanie ich jako nowe byłoby mylące
+    (wszystko wyglądałoby na "nowe" od razu przy pierwszym imporcie).
+
+    Dopiero gdy istnieje realny poprzedni stan (drugie i kolejne
+    uruchomienia), oferty których tożsamości (source_offer_url) w nim nie
+    było, dostają `is_new = True`.
+
+    Zwraca liczbę ofert oznaczonych jako nowe (0 przy pustym previous_state).
+    """
+    had_previous_baseline = bool(previous_state)
+    previous_identities = (
+        {offer_identity(o) for o in previous_state.values()} if had_previous_baseline else set()
+    )
+
+    new_count = 0
+    for offer in state.values():
+        is_new = had_previous_baseline and offer_identity(offer) not in previous_identities
+        offer["is_new"] = is_new
+        if is_new:
+            new_count += 1
+    return new_count
 
 
 def deduplicate_by_offer_identity(state: dict) -> tuple[dict, int]:
@@ -268,6 +307,15 @@ def main(argv: list[str] | None = None) -> int:
             "prawdopodobnie niestabilne sortowanie po cenie przy remisach).",
             removed_dupes,
         )
+
+    new_offers_count = mark_new_offers(previous_state, state)
+    if not previous_state:
+        logger.info(
+            "Brak poprzedniego stanu (pierwsze uruchomienie albo --fresh) - "
+            "budowanie początkowego katalogu, żadna oferta nie oznaczona jako is_new."
+        )
+    elif new_offers_count:
+        logger.info("Oznaczono %d nowych ofert (is_new=true).", new_offers_count)
 
     changes = detect_price_changes(previous_state, state)
 
