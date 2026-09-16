@@ -32,13 +32,22 @@ class Offer:
     extra: dict = field(default_factory=dict)
 
     def to_dict(self) -> dict:
+        """
+        Pola tekstowe (title/brand/model) NIGDY nie są zapisywane jako
+        JSON null - zawsze przynajmniej pusty string "". Powód: aplikacje
+        klienckie (np. iOS/SwiftData) często deklarują te pola jako
+        nieopcjonalny String, a `null` w JSON-ie wywala im dekodowanie
+        (DecodingError: "Expected value of type String but found null").
+        `price`/`year`/`image` mogą zostać `null` - to typy liczbowe/opcjonalne,
+        które klienci zwykle deklarują jako Optional i obsługują poprawnie.
+        """
         base = {
             "url": self.url,
-            "title": self.title,
+            "title": self.title or "",
             "price": self.price,
             "year": self.year,
-            "brand": self.brand,
-            "model": self.model,
+            "brand": self.brand or "",
+            "model": self.model or "",
             "image": self.image,
         }
         base.update(self.extra)
