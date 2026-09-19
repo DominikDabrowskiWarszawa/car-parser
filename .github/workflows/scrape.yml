@@ -28,7 +28,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
-        run: python main.py --urls-file urls.txt --max-pages 250 --page-delay 1.5 --price-change-threshold 5
+        run: python main.py --urls-file urls.txt --max-pages 250 --page-delay 1.5 --price-change-threshold 5 --fresh
 
       - name: Commit and push state.json
         run: |
