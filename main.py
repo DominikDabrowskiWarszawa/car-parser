@@ -224,6 +224,38 @@ def mark_new_offers(previous_state: dict, state: dict) -> int:
     return new_count
 
 
+def update_price_history(
+    previous_state: dict, state: dict, changes: list[tuple[dict, dict]], max_entries: int = 5
+) -> None:
+    """
+    Utrzymuje w state.json pole `price_history` - listę do `max_entries`
+    POPRZEDNICH cen tej samej oferty (najnowsza zmiana na początku listy),
+    narastająco między przebiegami.
+
+    Krok 1: dla KAŻDEJ oferty w bieżącym `state` przenosimy istniejącą
+    historię ze starego stanu (dopasowanie po tożsamości - source_offer_url),
+    żeby nie zgubić jej między przebiegami, w których cena akurat się nie
+    zmieniła. Pole jest ustawiane zawsze (co najmniej pusta lista `[]`),
+    nigdy nie brakuje go / nie jest `null` - łatwiej zdekodować jako zwykłą
+    (nieopcjonalną) tablicę po stronie klienta.
+
+    Krok 2: dla KAŻDEJ wykrytej w tym przebiegu zmiany ceny (te same pary,
+    które dostaje detect_price_changes) dopisujemy STARĄ cenę na początek
+    listy i obcinamy do `max_entries` (domyślnie 5) - najstarsze wypadają.
+    """
+    old_by_identity = {offer_identity(o): o for o in previous_state.values() if offer_identity(o)}
+
+    for offer in state.values():
+        ident = offer_identity(offer)
+        old_offer = old_by_identity.get(ident) if ident else None
+        old_history = old_offer.get("price_history") if old_offer else None
+        offer["price_history"] = list(old_history) if old_history else []
+
+    for old_offer, new_offer in changes:
+        history = [old_offer.get("price")] + new_offer.get("price_history", [])
+        new_offer["price_history"] = history[:max_entries]
+
+
 def deduplicate_by_offer_identity(state: dict) -> tuple[dict, int]:
     """
     Usuwa zduplikowane wpisy reprezentujące TĘ SAMĄ realną ofertę pod różnymi
@@ -318,6 +350,7 @@ def main(argv: list[str] | None = None) -> int:
         logger.info("Oznaczono %d nowych ofert (is_new=true).", new_offers_count)
 
     changes = detect_price_changes(previous_state, state)
+    update_price_history(previous_state, state, changes, max_entries=5)
 
     # Czyścimy adnotacje o zmianie ceny z POPRZEDNIEGO przebiegu (żeby nie
     # zostawały "wiszące" na ofertach, których cena akurat teraz się nie
