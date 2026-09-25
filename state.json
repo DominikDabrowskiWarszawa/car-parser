@@ -4250,18 +4250,6 @@
   },
   "https://findcar.pl/znajdz-samochod/2?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
     "url": "https://findcar.pl/znajdz-samochod/2?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
-    "title": "AudiA5 Avant TFSI quattro 150 kW S tronic",
-    "price": 240600,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "A5 Avant",
-    "image": "https://carapi.activemotors.pl/photo/1961152/14f969ad5f95849c.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-nowy-2026-benzyna-niebieski-naped-4x4-kombi-mazowieckie-audi-krotoski-warszawa-wolica-087690607",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/2?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/2?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 226600,
     "year": 2026,
@@ -4269,6 +4257,18 @@
     "model": "A5 Limousine",
     "image": "https://carapi.activemotors.pl/photo/1964906/c65db6423f66497b.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-uzywany-2026-benzyna-niebieski-naped-4x4-sedan-limuzyna-slaskie-audi-porsche-sosnowiec-028383963",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/2?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/2?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
+    "title": "AudiA5 Avant TFSI quattro 150 kW S tronic",
+    "price": 240600,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "A5 Avant",
+    "image": "https://carapi.activemotors.pl/photo/1961152/14f969ad5f95849c.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-nowy-2026-benzyna-niebieski-naped-4x4-kombi-mazowieckie-audi-krotoski-warszawa-wolica-087690607",
     "is_new": false,
     "price_history": []
   },
@@ -4638,6 +4638,18 @@
   },
   "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
     "url": "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
+    "title": "AudiA5 Avant TFSI quattro 150(204) kW(KM) S tronic",
+    "price": 235000,
+    "year": 2025,
+    "brand": "Audi",
+    "model": "A5 Avant",
+    "image": "https://carapi.activemotors.pl/photo/1908121/573ae7925c20b98d.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-uzywany-2025-benzyna-szary-naped-4x4-kombi-mazowieckie-porsche-centrum-warszawa-polczynska-030624778",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
     "title": "AudiQ5 TFSI 150 kW/204 KM S tronic",
     "price": 178999,
     "year": 2025,
@@ -4649,18 +4661,6 @@
     "price_history": [
       179999
     ]
-  },
-  "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
-    "title": "AudiA5 Avant TFSI quattro 150(204) kW(KM) S tronic",
-    "price": 235000,
-    "year": 2025,
-    "brand": "Audi",
-    "model": "A5 Avant",
-    "image": "https://carapi.activemotors.pl/photo/1908121/573ae7925c20b98d.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-uzywany-2025-benzyna-szary-naped-4x4-kombi-mazowieckie-porsche-centrum-warszawa-polczynska-030624778",
-    "is_new": false,
-    "price_history": []
   },
   "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
     "url": "https://findcar.pl/znajdz-samochod/4?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
@@ -5255,6 +5255,18 @@
   "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
     "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
     "title": "AudiA5 Avant TFSI 110 kW S tronic",
+    "price": 152800,
+    "year": 2025,
+    "brand": "Audi",
+    "model": "A5 Avant",
+    "image": "https://carapi.activemotors.pl/photo/2137231/2eeff3997c2c8d2d.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-uzywany-2025-benzyna-niebieski-naped-przod-kombi-mazowieckie-audi-krotoski-warszawa-wolica-011455599",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
+    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
+    "title": "AudiA5 Avant TFSI 110 kW S tronic",
     "price": 154900,
     "year": 2025,
     "brand": "Audi",
@@ -5264,8 +5276,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
-    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
+  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
+    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 235500,
     "year": 2026,
@@ -5273,18 +5285,6 @@
     "model": "A5 Limousine",
     "image": "https://carapi.activemotors.pl/photo/2069974/46000d79842bbd77.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-4x4-sedan-limuzyna-malopolskie-audi-krakow-zakopianska-009708250",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
-    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
-    "title": "AudiA5 Avant TFSI 110 kW S tronic",
-    "price": 152800,
-    "year": 2025,
-    "brand": "Audi",
-    "model": "A5 Avant",
-    "image": "https://carapi.activemotors.pl/photo/2137231/2eeff3997c2c8d2d.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-uzywany-2025-benzyna-niebieski-naped-przod-kombi-mazowieckie-audi-krotoski-warszawa-wolica-011455599",
     "is_new": false,
     "price_history": []
   },
@@ -5302,6 +5302,18 @@
   },
   "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
     "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
+    "title": "AudiA5 Avant TFSI quattro 150(204) kW(KM) S tronic",
+    "price": 214000,
+    "year": 2025,
+    "brand": "Audi",
+    "model": "A5 Avant",
+    "image": "https://carapi.activemotors.pl/photo/1908122/8fb106c14a7ddf81.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-uzywany-2025-benzyna-szary-naped-4x4-kombi-mazowieckie-porsche-centrum-warszawa-polczynska-070728443",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
+    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 263900,
     "year": 2026,
@@ -5312,8 +5324,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
-    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
+  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
+    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
     "title": "AudiQ5 Sportback TFSI 150 kW/204 KM Quattro S tronic",
     "price": 192000,
     "year": 2025,
@@ -5326,8 +5338,8 @@
       194000
     ]
   },
-  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
-    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
+  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
     "title": "AudiA5 Avant TFSI quattro 272KM (200 kW) S tronic",
     "price": 272500,
     "year": 2026,
@@ -5338,8 +5350,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
+  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
+    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 271600,
     "year": 2026,
@@ -5347,18 +5359,6 @@
     "model": "Q5",
     "image": "https://carapi.activemotors.pl/photo/1967333/b9342b1090c59c6d.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q5-nowy-2026-benzyna-czarny-naped-4x4-suv-lodzkie-audi-krotoski-lodz-079927692",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
-    "url": "https://findcar.pl/znajdz-samochod/8?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
-    "title": "AudiA5 Avant TFSI quattro 150(204) kW(KM) S tronic",
-    "price": 214000,
-    "year": 2025,
-    "brand": "Audi",
-    "model": "A5 Avant",
-    "image": "https://carapi.activemotors.pl/photo/1908122/8fb106c14a7ddf81.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-uzywany-2025-benzyna-szary-naped-4x4-kombi-mazowieckie-porsche-centrum-warszawa-polczynska-070728443",
     "is_new": false,
     "price_history": []
   },
@@ -5412,18 +5412,6 @@
   },
   "https://findcar.pl/znajdz-samochod/9?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
     "url": "https://findcar.pl/znajdz-samochod/9?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
-    "title": "AudiA5 Avant TFSI 150 kW S tronic",
-    "price": 207400,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "A5 Avant",
-    "image": "https://carapi.activemotors.pl/photo/2032765/44908e67f3516421.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-nowy-2026-benzyna-czarny-naped-przod-kombi-mazowieckie-audi-warszawa-radzyminska-058864232",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/9?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/9?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 264900,
     "year": 2026,
@@ -5431,6 +5419,18 @@
     "model": "Q5",
     "image": "https://carapi.activemotors.pl/photo/1967307/783fa0affbdfe04f.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q5-nowy-2026-benzyna-czerwony-naped-4x4-suv-slaskie-audi-krotoski-czestochowa-039105704",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/9?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/9?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
+    "title": "AudiA5 Avant TFSI 150 kW S tronic",
+    "price": 207400,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "A5 Avant",
+    "image": "https://carapi.activemotors.pl/photo/2032765/44908e67f3516421.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-nowy-2026-benzyna-czarny-naped-przod-kombi-mazowieckie-audi-warszawa-radzyminska-058864232",
     "is_new": false,
     "price_history": []
   },
@@ -5877,6 +5877,18 @@
   },
   "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
     "url": "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
+    "title": "AudiA5 Limousine TFSI Quattro S tronic",
+    "price": 260227,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "A5 Limousine",
+    "image": "https://cdn.lellek.pl/assets/2/vehicles/1969/4923f464-3374-48e9-abbf-406fd9f724d7/renders/active/original.jpeg?v=2",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-4x4-sedan-limuzyna-slaskie-audi-centrum-lellek-gliwice-090083186",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
     "title": "AudiQ5 SUV TDI 150 (204) kW (KM) quattro S tronic",
     "price": 260800,
     "year": 2026,
@@ -5887,8 +5899,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
+  "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
+    "url": "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
     "title": "AudiA5 Avant TFSI 110 kW S tronic",
     "price": 217100,
     "year": 2026,
@@ -5899,8 +5911,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
-    "url": "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
+  "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
     "title": "AudiA6 Avant TFSI 150(204) kW(KM) S tronic",
     "price": 249900,
     "year": 2025,
@@ -5908,18 +5920,6 @@
     "model": "A6 Avant",
     "image": "https://cdn.lellek.pl/assets/13/vehicles/865/2d7cfcd0-d84d-4030-9a01-e07227c64089/renders/active/original.jpeg?v=2",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a6-avant-nowy-2025-benzyna-czarny-naped-przod-kompakt-opolskie-audi-select-plus-lellek-opole-069823895",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/11?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
-    "title": "AudiA5 Limousine TFSI Quattro S tronic",
-    "price": 260227,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "A5 Limousine",
-    "image": "https://cdn.lellek.pl/assets/2/vehicles/1969/4923f464-3374-48e9-abbf-406fd9f724d7/renders/active/original.jpeg?v=2",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-4x4-sedan-limuzyna-slaskie-audi-centrum-lellek-gliwice-090083186",
     "is_new": false,
     "price_history": []
   },
@@ -5961,6 +5961,18 @@
   },
   "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
     "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
+    "title": "AudiA5 Limousine TFSI S tronic",
+    "price": 200948,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "A5 Limousine",
+    "image": "https://cdn.lellek.pl/assets/2/vehicles/1967/751d4af5-1b5c-4d0e-8443-2167dd9c606d/renders/active/original.jpeg?v=2",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-przod-sedan-limuzyna-slaskie-audi-centrum-lellek-gliwice-082899956",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiQ5 TFSI 150 kW S tronic",
     "price": 245238,
     "year": 2026,
@@ -5971,8 +5983,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
+  "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
+    "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
     "title": "AudiQ5 FY",
     "price": 245300,
     "year": 2026,
@@ -5983,8 +5995,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
-    "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
+  "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
+    "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 235900,
     "year": 2026,
@@ -5995,27 +6007,15 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
-    "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
-    "title": "AudiA6 Avant TFSI 150 kW S tronic",
-    "price": 256000,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "A6 Avant",
-    "image": "https://carapi.activemotors.pl/photo/2059020/9ce1fe33b536f2c2.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a6-avant-nowy-2026-benzyna-czarny-naped-przod-kombi-zachodniopomorskie-audi-szczecin-080842901",
-    "is_new": false,
-    "price_history": []
-  },
   "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
     "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
-    "title": "AudiA5 Limousine TFSI S tronic",
-    "price": 200948,
+    "title": "AudiQ3 III",
+    "price": 258900,
     "year": 2026,
     "brand": "Audi",
-    "model": "A5 Limousine",
-    "image": "https://cdn.lellek.pl/assets/2/vehicles/1967/751d4af5-1b5c-4d0e-8443-2167dd9c606d/renders/active/original.jpeg?v=2",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-przod-sedan-limuzyna-slaskie-audi-centrum-lellek-gliwice-082899956",
+    "model": "Q3",
+    "image": "https://is.img2.pl/04/o/m/195/6110147.jpg?v=1772700048",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-nowy-2026-benzyna-bialy-naped-4x4-suv-swietokrzyskie-skoda-autorud-kielce-080173223",
     "is_new": false,
     "price_history": []
   },
@@ -6630,6 +6630,18 @@
   },
   "https://findcar.pl/znajdz-samochod/15?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
     "url": "https://findcar.pl/znajdz-samochod/15?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
+    "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
+    "price": 203900,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "Q3 Sportback",
+    "image": "https://carapi.activemotors.pl/photo/2041897/0c49a6d37435eb30.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-niebieski-naped-przod-suv-malopolskie-audi-krakow-balice-065292250",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/15?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
+    "url": "https://findcar.pl/znajdz-samochod/15?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
     "title": "AudiA5 Avant TFSI quattro 150(204) kW(KM) S tronic",
     "price": 272199,
     "year": 2026,
@@ -6640,8 +6652,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/15?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
-    "url": "https://findcar.pl/znajdz-samochod/15?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
+  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
+    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
     "title": "AudiA6 Limousine TFSI 150 kW S tronic",
     "price": 228900,
     "year": 2026,
@@ -6652,8 +6664,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
-    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiA5 Limousine Sedan TFSI quattro 150 kW S tronic",
     "price": 174900,
     "year": 2025,
@@ -6666,8 +6678,8 @@
       179900
     ]
   },
-  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiA5 Limousine TFSI 150(204) kW(KM) S tronic",
     "price": 201000,
     "year": 2026,
@@ -6678,8 +6690,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
+  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 247410,
     "year": 2026,
@@ -6687,18 +6699,6 @@
     "model": "A5 Limousine",
     "image": "https://carapi.activemotors.pl/photo/2045388/7810d6d678787a34.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-4x4-sedan-limuzyna-slaskie-audi-porsche-rybnik-068532811",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/16?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
-    "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
-    "price": 203900,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "Q3 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2041897/0c49a6d37435eb30.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-niebieski-naped-przod-suv-malopolskie-audi-krakow-balice-065292250",
     "is_new": false,
     "price_history": []
   },
@@ -6862,6 +6862,18 @@
   },
   "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
     "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
+    "title": "AudiQ5 Sportback 40 TFSI quattro",
+    "price": 195900,
+    "year": 2025,
+    "brand": "Audi",
+    "model": "Q5 Sportback",
+    "image": "https://carapi.activemotors.pl/photo/2147955/cb93b67555bbf7d3.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q5-sportback-uzywany-2025-benzyna-bialy-naped-4x4-kompakt-wielkopolskie-audi-porsche-poznan-franowo-051714117",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiQ3",
     "price": 144900,
     "year": 2025,
@@ -6874,8 +6886,8 @@
       148900
     ]
   },
-  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
+  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
+    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
     "title": "AudiQ3 Sportback TFSI quattro 150 kW S tronic",
     "price": 274800,
     "year": 2026,
@@ -6886,8 +6898,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
-    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
+  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
+    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
     "title": "AudiA5 Avant TFSI 110 kW S tronic",
     "price": 214200,
     "year": 2026,
@@ -6898,8 +6910,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
-    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
+  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
+    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
     "title": "AudiA5 Limousine TFSI quattro 200 kW S tronic",
     "price": 274000,
     "year": 2026,
@@ -6907,18 +6919,6 @@
     "model": "A5 Limousine",
     "image": "https://carapi.activemotors.pl/photo/2116611/7fb9fd7f1d893381.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-szary-naped-4x4-sedan-limuzyna-mazowieckie-audi-city-warszawa-002896436",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
-    "url": "https://findcar.pl/znajdz-samochod/17?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
-    "title": "AudiQ5 Sportback 40 TFSI quattro",
-    "price": 195900,
-    "year": 2025,
-    "brand": "Audi",
-    "model": "Q5 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2147955/cb93b67555bbf7d3.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q5-sportback-uzywany-2025-benzyna-bialy-naped-4x4-kompakt-wielkopolskie-audi-porsche-poznan-franowo-051714117",
     "is_new": false,
     "price_history": []
   },
@@ -7547,6 +7547,18 @@
   },
   "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
     "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+    "title": "AudiQ3 Sportback TFSI quattro 150 kW (204 KM)S tronic",
+    "price": 259000,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "Q3 Sportback",
+    "image": "https://carapi.activemotors.pl/photo/2217760/6071cf40fcb43347.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-zielony-naped-4x4-kompakt-wielkopolskie-audi-porsche-poznan-franowo-077602713",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 224439,
     "year": 2026,
@@ -7559,8 +7571,8 @@
       225859
     ]
   },
-  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiA5 Avant TFSI quattro 150 kW S tronic",
     "price": 259211,
     "year": 2026,
@@ -7568,18 +7580,6 @@
     "model": "A5 Avant",
     "image": "https://carapi.activemotors.pl/photo/2052328/733a267992f6d99c.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-nowy-2026-benzyna-szary-naped-4x4-kombi-mazowieckie-audi-warszawa-wilanow-020907927",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
-    "title": "AudiQ3 Sportback TFSI quattro 150 kW (204 KM)S tronic",
-    "price": 259000,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "Q3 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2217760/6071cf40fcb43347.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-zielony-naped-4x4-kompakt-wielkopolskie-audi-porsche-poznan-franowo-077602713",
     "is_new": false,
     "price_history": []
   },
@@ -7681,6 +7681,18 @@
   },
   "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
     "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
+    "title": "AudiQ3 Sportback TFSI 110 kW(150 KM) S tronic",
+    "price": 187797,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "Q3 Sportback",
+    "image": "https://carapi.activemotors.pl/photo/2132775/5a37b5c3b269a679.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-czerwony-naped-przod-suv-warminsko-mazurskie-audi-fiedorowicz-olsztyn-018324664",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
+    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
     "title": "AudiA5 Avant TFSI 110 kW S tronic",
     "price": 154900,
     "year": 2025,
@@ -7691,8 +7703,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
-    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
+  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
     "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
     "price": 214000,
     "year": 2026,
@@ -7703,8 +7715,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
+  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
+    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
     "title": "AudiA5 Limousine Sedan TFSI 110 (150 KM) kW S tronic",
     "price": 228400,
     "year": 2026,
@@ -7715,8 +7727,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
-    "url": "https://findcar.pl/znajdz-samochod/21?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
+  "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
+    "url": "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 261100,
     "year": 2026,
@@ -7727,8 +7739,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
-    "url": "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+  "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiA5 Limousine Sedan TFSI quattro 150 kW S tronic",
     "price": 257513,
     "year": 2026,
@@ -7739,8 +7751,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+  "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiA5 Limousine TFSI 110 kW S tronic",
     "price": 195900,
     "year": 2026,
@@ -7748,18 +7760,6 @@
     "model": "A5 Limousine",
     "image": "https://carapi.activemotors.pl/photo/2165000/5d9103eb0248c8c8.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-szary-naped-przod-sedan-limuzyna-slaskie-audi-krotoski-czestochowa-051759612",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/22?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
-    "title": "AudiQ3 Sportback TFSI 110 kW(150 KM) S tronic",
-    "price": 187797,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "Q3 Sportback",
-    "image": "https://carapi.activemotors.pl/photo/2132775/5a37b5c3b269a679.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-czerwony-naped-przod-suv-warminsko-mazurskie-audi-fiedorowicz-olsztyn-018324664",
     "is_new": false,
     "price_history": []
   },
@@ -7909,6 +7909,18 @@
   },
   "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
     "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+    "title": "AudiA5 Limousine TFSI quattro 150 kW S tronic",
+    "price": 271600,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "A5 Limousine",
+    "image": "https://carapi.activemotors.pl/photo/2146669/3680c2413165217d.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-inny-naped-4x4-sedan-limuzyna-mazowieckie-audi-warszawa-radzyminska-049734675",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 226900,
     "year": 2026,
@@ -7919,8 +7931,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
     "price": 189337,
     "year": 2026,
@@ -7931,8 +7943,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiQ3 TFSI 195 kW S tronic",
     "price": 249900,
     "year": 2025,
@@ -7943,8 +7955,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
     "title": "AudiQ3 SUV TFSI 110kW (150 KM) S tronic",
     "price": 210500,
     "year": 2026,
@@ -7955,8 +7967,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
     "title": "AudiA5 Avant TFSI quattro 150(204) kW(KM) S tronic",
     "price": 236226,
     "year": 2026,
@@ -7967,8 +7979,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 259200,
     "year": 2026,
@@ -7979,8 +7991,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
     "title": "AudiA5 Limousine TFSI 110 kW S tronic",
     "price": 149900,
     "year": 2025,
@@ -7991,8 +8003,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 244442,
     "year": 2026,
@@ -8003,8 +8015,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
+  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
+    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 274800,
     "year": 2026,
@@ -8012,18 +8024,6 @@
     "model": "Q5",
     "image": "https://carapi.activemotors.pl/photo/2065866/be4a32c5be30ded9.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q5-nowy-2026-benzyna-szary-naped-4x4-suv-slaskie-audi-bielsko-biala-046746881",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
-    "url": "https://findcar.pl/znajdz-samochod/23?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
-    "title": "AudiA5 Limousine TFSI quattro 150 kW S tronic",
-    "price": 271600,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "A5 Limousine",
-    "image": "https://carapi.activemotors.pl/photo/2146669/3680c2413165217d.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-inny-naped-4x4-sedan-limuzyna-mazowieckie-audi-warszawa-radzyminska-049734675",
     "is_new": false,
     "price_history": []
   },
@@ -8216,6 +8216,18 @@
   },
   "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
     "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
+    "title": "AudiA5 Limousine Sedan TFSI quattro 150 kW S tronic",
+    "price": 249830,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "A5 Limousine",
+    "image": "https://carapi.activemotors.pl/photo/2122678/fa30b01b81574fa2.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-4x4-kompakt-wielkopolskie-audi-centrum-poznan-lawica-011410104",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 272176,
     "year": 2026,
@@ -8226,8 +8238,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
+  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
+    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 254320,
     "year": 2026,
@@ -8238,8 +8250,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
-    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
+  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 274900,
     "year": 2026,
@@ -8250,8 +8262,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
+  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
+    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 242500,
     "year": 2026,
@@ -8262,8 +8274,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
-    "url": "https://findcar.pl/znajdz-samochod/24?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
+  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
+    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
     "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
     "price": 216520,
     "year": 2026,
@@ -8274,8 +8286,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
-    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
     "price": 208226,
     "year": 2026,
@@ -8286,8 +8298,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 245192,
     "year": 2026,
@@ -8300,8 +8312,8 @@
       264523
     ]
   },
-  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
+  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiA6 Limousine TFSI (150 kW) 204 KM S tronic",
     "price": 254830,
     "year": 2026,
@@ -8309,18 +8321,6 @@
     "model": "A6 Limousine",
     "image": "https://carapi.activemotors.pl/photo/2177865/2fdd0e0eb699e196.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a6-limousine-nowy-2026-benzyna-czarny-naped-przod-sedan-limuzyna-slaskie-audi-porsche-rybnik-069819436",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/25?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
-    "title": "AudiA5 Limousine Sedan TFSI quattro 150 kW S tronic",
-    "price": 249830,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "A5 Limousine",
-    "image": "https://carapi.activemotors.pl/photo/2122678/fa30b01b81574fa2.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-czarny-naped-4x4-kompakt-wielkopolskie-audi-centrum-poznan-lawica-011410104",
     "is_new": false,
     "price_history": []
   },
@@ -8999,6 +8999,18 @@
   },
   "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
     "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+    "title": "AudiQ3 35 TFSI mHEV S tronic",
+    "price": 139900,
+    "year": 2025,
+    "brand": "Audi",
+    "model": "Q3",
+    "image": "https://carapi.activemotors.pl/photo/2231146/b3774e9181f1c9a6.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-uzywany-2025-benzyna-granatowy-naped-przod-suv-wielkopolskie-audi-centrum-poznan-lawica-088774107",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiA5 Avant TFSI quattro 150 kW S tronic",
     "price": 249321,
     "year": 2026,
@@ -9009,8 +9021,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiA5 Limousine 35 TFSI 150KM Matrix LED Kamera 360 Radar",
     "price": 172900,
     "year": 2025,
@@ -9021,8 +9033,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 271600,
     "year": 2026,
@@ -9033,8 +9045,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
     "title": "AudiA5 Avant TFSI 150 kW S tronic",
     "price": 210000,
     "year": 2026,
@@ -9045,8 +9057,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
     "title": "AudiQ5 TFSI quattro 150 kW S tronic",
     "price": 261100,
     "year": 2026,
@@ -9057,8 +9069,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
     "title": "AudiQ3 Sportback TFSI quattro 150 kW (204 KM)S tronic",
     "price": 253653,
     "year": 2026,
@@ -9069,8 +9081,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
     "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
     "price": 207030,
     "year": 2026,
@@ -9081,8 +9093,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
+  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
+    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
     "title": "AudiQ3 Sportback TFSI 110 kW (150KM) S tronic",
     "price": 215334,
     "year": 2026,
@@ -9090,18 +9102,6 @@
     "model": "Q3 Sportback",
     "image": "https://carapi.activemotors.pl/photo/2164736/a93c230c73164ed8.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-czarny-naped-przod-suv-mazowieckie-audi-porsche-warszawa-polczynska-054212531",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
-    "url": "https://findcar.pl/znajdz-samochod/29?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
-    "title": "AudiQ3 35 TFSI mHEV S tronic",
-    "price": 139900,
-    "year": 2025,
-    "brand": "Audi",
-    "model": "Q3",
-    "image": "https://carapi.activemotors.pl/photo/2231146/b3774e9181f1c9a6.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-uzywany-2025-benzyna-granatowy-naped-przod-suv-wielkopolskie-audi-centrum-poznan-lawica-088774107",
     "is_new": false,
     "price_history": []
   },
@@ -11877,6 +11877,18 @@
   },
   "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
     "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
+    "title": "AudiQ3 SUV TFSI quattro 150 kW S tronic",
+    "price": 251200,
+    "year": 2026,
+    "brand": "Audi",
+    "model": "Q3",
+    "image": "https://carapi.activemotors.pl/photo/2254212/196fe3d25d465488.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-nowy-2026-benzyna-zielony-naped-4x4-suv-mazowieckie-audi-krotoski-warszawa-wolica-029042631",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
+    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
     "title": "AudiA5 Avant TFSI quattro 150 kW S tronic",
     "price": 253913,
     "year": 2026,
@@ -11887,8 +11899,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
-    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
+  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
+    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 233477,
     "year": 2026,
@@ -11899,8 +11911,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
-    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
+  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
+    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
     "title": "AudiQ5 SUV TFSI quattro 204 KM S tronic",
     "price": 242048,
     "year": 2026,
@@ -11911,8 +11923,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
-    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
+  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
     "title": "AudiA5 Avant TFSI 110(150) kW(KM) S tronic",
     "price": 209836,
     "year": 2026,
@@ -11923,8 +11935,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
+  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
+    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
     "title": "AudiA5 Avant TFSI 110(150) kW(KM) S tronic",
     "price": 187317,
     "year": 2026,
@@ -11935,8 +11947,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
-    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
+  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
     "title": "AudiQ3 SUV TFSI 110 kW S tronic",
     "price": 198000,
     "year": 2026,
@@ -11947,8 +11959,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
+  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
+    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
     "title": "AudiA5 Limousine TFSI quattro 150(204) kW(KM) S tronic",
     "price": 238359,
     "year": 2026,
@@ -11959,8 +11971,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
-    "url": "https://findcar.pl/znajdz-samochod/45?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
     "title": "AudiA5 Avant TFSI 150(204) kW(KM) S tronic",
     "price": 217718,
     "year": 2026,
@@ -11971,8 +11983,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiA5 Limousine Sedan TFSI 110 (150 KM) kW S tronic",
     "price": 207354,
     "year": 2026,
@@ -11983,8 +11995,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiA5 Limousine 40 TFSI quattro s tronic",
     "price": 209900,
     "year": 2026,
@@ -11995,8 +12007,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
     "title": "AudiA5 Limousine Sedan TFSI 110 (150 KM) kW S tronic",
     "price": 218030,
     "year": 2026,
@@ -12007,8 +12019,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-3",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
     "title": "AudiA5 Limousine Sedan TFSI 110 (150 KM) kW S tronic",
     "price": 214183,
     "year": 2026,
@@ -12019,8 +12031,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-4",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
     "title": "AudiA5 Avant TFSI 110(150) kW(KM) S tronic",
     "price": 187317,
     "year": 2026,
@@ -12031,8 +12043,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-5",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
     "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
     "price": 232900,
     "year": 2026,
@@ -12043,8 +12055,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
     "title": "AudiA5 Avant TFSI 110(150) kW(KM) S tronic",
     "price": 187317,
     "year": 2026,
@@ -12055,8 +12067,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-7",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
     "title": "AudiA5 Avant TFSI 110 kW S tronic",
     "price": 238300,
     "year": 2026,
@@ -12067,8 +12079,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-8",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
     "title": "AudiA5 Avant TFSI 150(204) kW(KM) S tronic",
     "price": 211191,
     "year": 2026,
@@ -12079,8 +12091,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-9",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
     "title": "AudiA5 Limousine Sedan TFSI quattro 150 kW S tronic",
     "price": 228198,
     "year": 2026,
@@ -12091,8 +12103,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-10",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
     "title": "AudiA5 Limousine Sedan TFSI 110 (150 KM) kW S tronic",
     "price": 218030,
     "year": 2026,
@@ -12103,8 +12115,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-11",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
     "title": "AudiA5 Avant TFSI quattro 150 kW S tronic",
     "price": 247894,
     "year": 2026,
@@ -12115,8 +12127,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-12",
+  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
+    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
     "title": "AudiA5 Avant TFSI quattro 150 kW S tronic",
     "price": 260244,
     "year": 2026,
@@ -12127,20 +12139,20 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
-    "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
-    "title": "AudiA5 Limousine TFSI 110 kW S tronic",
-    "price": 212200,
+  "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
+    "url": "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+    "title": "AudiA5 Limousine Sedan TFSI quattro 150 kW S tronic",
+    "price": 248468,
     "year": 2026,
     "brand": "Audi",
     "model": "A5 Limousine",
-    "image": "https://carapi.activemotors.pl/photo/2256075/a6ac1d442e8bcb8b.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-niebieski-naped-przod-sedan-limuzyna-slaskie-audi-krotoski-czestochowa-030303750",
+    "image": "https://carapi.activemotors.pl/photo/2257405/fbc2764fc98c25ac.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-szary-naped-4x4-kompakt-dolnoslaskie-audi-wroclaw-091361205",
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
-    "url": "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+  "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiA5 Avant TFSI 150(204) kW(KM) S tronic",
     "price": 224590,
     "year": 2026,
@@ -12148,18 +12160,6 @@
     "model": "A5 Avant",
     "image": "https://carapi.activemotors.pl/photo/2252477/3f78c7340b052d56.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-avant-nowy-2026-benzyna-szary-naped-4x4-kombi-mazowieckie-audi-warszawa-wilanow-090030767",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/47?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
-    "title": "AudiQ3 SUV TFSI quattro 150 kW S tronic",
-    "price": 251200,
-    "year": 2026,
-    "brand": "Audi",
-    "model": "Q3",
-    "image": "https://carapi.activemotors.pl/photo/2254212/196fe3d25d465488.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-nowy-2026-benzyna-zielony-naped-4x4-suv-mazowieckie-audi-krotoski-warszawa-wolica-029042631",
     "is_new": false,
     "price_history": []
   },
@@ -13017,6 +13017,18 @@
   },
   "https://findcar.pl/znajdz-samochod/51?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
     "url": "https://findcar.pl/znajdz-samochod/51?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
+    "title": "AudiA6 Avant TFSI 150(204) kW(KM) S tronic",
+    "price": 199900,
+    "year": 2025,
+    "brand": "Audi",
+    "model": "A6 Avant",
+    "image": "https://cdn.lellek.pl/assets/13/vehicles/3165/6dd91b53-8534-42e8-a429-9c5b087cd9f9/renders/active/original.jpeg?v=1",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a6-avant-uzywany-2025-benzyna-szary-naped-przod-kompakt-opolskie-audi-select-plus-lellek-opole-087117436",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
+    "url": "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
     "title": "AudiQ3 SUV TFSI 110 kW S tronic",
     "price": 207300,
     "year": 2026,
@@ -13027,8 +13039,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0": {
-    "url": "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-0",
+  "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
+    "url": "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
     "title": "AudiQ3 SUV TFSI 110 kW S tronic",
     "price": 241500,
     "year": 2026,
@@ -13039,8 +13051,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1": {
-    "url": "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-1",
+  "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
+    "url": "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
     "title": "AudiQ3 Sportback TFSI 110 kW S tronic",
     "price": 224900,
     "year": 2026,
@@ -13048,18 +13060,6 @@
     "model": "Q3 Sportback",
     "image": "https://carapi.activemotors.pl/photo/2266710/3f5a05ed25ecc6e6.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-sportback-nowy-2026-benzyna-bialy-naped-przod-suv-slaskie-audi-krotoski-czestochowa-013268805",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2": {
-    "url": "https://findcar.pl/znajdz-samochod/52?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-2",
-    "title": "AudiA6 Avant TFSI 150(204) kW(KM) S tronic",
-    "price": 199900,
-    "year": 2025,
-    "brand": "Audi",
-    "model": "A6 Avant",
-    "image": "https://cdn.lellek.pl/assets/13/vehicles/3165/6dd91b53-8534-42e8-a429-9c5b087cd9f9/renders/active/original.jpeg?v=1",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a6-avant-uzywany-2025-benzyna-szary-naped-przod-kompakt-opolskie-audi-select-plus-lellek-opole-087117436",
     "is_new": false,
     "price_history": []
   },
@@ -14731,18 +14731,6 @@
   },
   "https://findcar.pl/znajdz-samochod/2?makes=toyota&priceMax=275000&models=camry&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13": {
     "url": "https://findcar.pl/znajdz-samochod/2?makes=toyota&priceMax=275000&models=camry&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-13",
-    "title": "ToyotaCamry 2.5 Hybrid Comfort CVT",
-    "price": 157900,
-    "year": 2025,
-    "brand": "Toyota",
-    "model": "Camry",
-    "image": "https://panel.pewneauto.pl/media/UsedCar/421722/6aa428c78546d.png",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/toyota-camry-uzywany-2025-benzyna-czarny-naped-przod-sedan-mazowieckie-toyota-warszawa-zeran-072966542",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://findcar.pl/znajdz-samochod/2?makes=toyota&priceMax=275000&models=camry&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
-    "url": "https://findcar.pl/znajdz-samochod/2?makes=toyota&priceMax=275000&models=camry&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
     "title": "ToyotaCamry 2.5 Hybrid Prestige CVT",
     "price": 168800,
     "year": 2025,
@@ -14750,6 +14738,18 @@
     "model": "Camry",
     "image": "https://panel.pewneauto.pl/media/UsedCar/429226/6aacef0518574.jpg",
     "source_offer_url": "https://findcar.pl/oferty-dealerow/toyota-camry-uzywany-2025-hybryda-inny-kolor-naped-przod-sedan-mazowieckie-toyota-chodzen-warszawa-zgorzala-065868846",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://findcar.pl/znajdz-samochod/2?makes=toyota&priceMax=275000&models=camry&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
+    "url": "https://findcar.pl/znajdz-samochod/2?makes=toyota&priceMax=275000&models=camry&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
+    "title": "ToyotaCamry 2.5 Hybrid Comfort CVT",
+    "price": 157900,
+    "year": 2025,
+    "brand": "Toyota",
+    "model": "Camry",
+    "image": "https://panel.pewneauto.pl/media/UsedCar/421722/6aa428c78546d.png",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/toyota-camry-uzywany-2025-benzyna-czarny-naped-przod-sedan-mazowieckie-toyota-warszawa-zeran-072966542",
     "is_new": false,
     "price_history": []
   },
@@ -15271,13 +15271,13 @@
   },
   "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14": {
     "url": "https://findcar.pl/znajdz-samochod/46?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-14",
-    "title": "AudiA5 Limousine Sedan TFSI quattro 150 kW S tronic",
-    "price": 248468,
+    "title": "AudiA5 Limousine TFSI 110 kW S tronic",
+    "price": 212200,
     "year": 2026,
     "brand": "Audi",
     "model": "A5 Limousine",
-    "image": "https://carapi.activemotors.pl/photo/2257405/fbc2764fc98c25ac.jpg",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-szary-naped-4x4-kompakt-dolnoslaskie-audi-wroclaw-091361205",
+    "image": "https://carapi.activemotors.pl/photo/2256075/a6ac1d442e8bcb8b.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a5-limousine-nowy-2026-benzyna-niebieski-naped-przod-sedan-limuzyna-slaskie-audi-krotoski-czestochowa-030303750",
     "is_new": false,
     "price_history": []
   },
@@ -15331,13 +15331,13 @@
   },
   "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6": {
     "url": "https://findcar.pl/znajdz-samochod/12?makes=audi&priceMax=275000&models=a5,a6,q3,q5&fuelTypes=petrol,hybrid_hev&yearMin=2025#offer-6",
-    "title": "AudiQ3 III",
-    "price": 258900,
+    "title": "AudiA6 Avant TFSI 150 kW S tronic",
+    "price": 256000,
     "year": 2026,
     "brand": "Audi",
-    "model": "Q3",
-    "image": "https://is.img2.pl/04/o/m/195/6110147.jpg?v=1772700048",
-    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-q3-nowy-2026-benzyna-bialy-naped-4x4-suv-swietokrzyskie-skoda-autorud-kielce-080173223",
+    "model": "A6 Avant",
+    "image": "https://carapi.activemotors.pl/photo/2059020/9ce1fe33b536f2c2.jpg",
+    "source_offer_url": "https://findcar.pl/oferty-dealerow/audi-a6-avant-nowy-2026-benzyna-czarny-naped-przod-kombi-zachodniopomorskie-audi-szczecin-080842901",
     "is_new": false,
     "price_history": []
   },
