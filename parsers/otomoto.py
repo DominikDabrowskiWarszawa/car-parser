@@ -245,7 +245,11 @@ class OtomotoParser(SiteParser):
             if offer_url.startswith("/"):
                 offer_url = f"https://www.otomoto.pl{offer_url}"
 
-            price_el = card.select_one(_PRICE_SELECTOR)
+            # select_one with a selector list returns the first match in document order,
+            # so a wrapper with "price" in its class would win over the h3 - try in priority order.
+            price_el = next(
+                (el for sel in _PRICE_SELECTOR.split(", ") if (el := card.select_one(sel))), None
+            )
             price = parse_price(price_el.get_text()) if price_el else None
 
             year = self._extract_year_from_params(card)

@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 import unicodedata
 
-_PRICE_RE = re.compile(r"[\d\s\u00A0.,]+")
+_PRICE_RE = re.compile(r"\d[\d\s\u00A0.,]*")
 _YEAR_RE = re.compile(r"\b(19[5-9]\d|20[0-4]\d)\b")
 
 # Marki, których nazwy nie da się poprawnie odgadnąć ze slug-a samą
