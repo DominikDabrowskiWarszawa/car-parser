@@ -318,8 +318,8 @@
     "year": 2026,
     "brand": "Mazda",
     "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/vxtnt64hn6s-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiPmx.html",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/1xld9ahm6m5q-OTOMOTOPL/image;s=320x240",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiPgS.html",
     "is_new": false,
     "price_history": []
   },
@@ -330,8 +330,8 @@
     "year": 2026,
     "brand": "Mazda",
     "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/1xld9ahm6m5q-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiPgS.html",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/vxtnt64hn6s-OTOMOTOPL/image;s=320x240",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiPmx.html",
     "is_new": false,
     "price_history": []
   },
@@ -356,7 +356,7 @@
     "model": "CX 5",
     "image": "https://ireland.apollo.olxcdn.com/v1/files/6bekn4ajewi11-OTOMOTOPL/image;s=320x240",
     "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6Ii8hm.html",
-    "is_new": true,
+    "is_new": false,
     "price_history": []
   },
   "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-30": {
@@ -366,13 +366,25 @@
     "year": 2026,
     "brand": "Mazda",
     "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/szay2izbcdhc1-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiQLK.html",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/efu5400j6fvd-OTOMOTOPL/image;s=320x240",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiQIS.html",
     "is_new": false,
     "price_history": []
   },
   "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-31": {
     "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-31",
+    "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
+    "price": 144900,
+    "year": 2026,
+    "brand": "Mazda",
+    "model": "CX 5",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/cavjxcdf83s81-OTOMOTOPL/image;s=320x240",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiQFZ.html",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026?page=2#offer-1": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026?page=2#offer-1",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
     "price": 146500,
     "year": 2026,
@@ -380,18 +392,6 @@
     "model": "CX 5",
     "image": "https://ireland.apollo.olxcdn.com/v1/files/gcwqgikyla361-OTOMOTOPL/image;s=320x240",
     "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiQCj.html",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026?page=2#offer-1": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026?page=2#offer-1",
-    "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
-    "price": 144900,
-    "year": 2026,
-    "brand": "Mazda",
-    "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/efu5400j6fvd-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiQIS.html",
     "is_new": false,
     "price_history": []
   },
@@ -416,18 +416,6 @@
     "model": "CX 5",
     "image": "https://ireland.apollo.olxcdn.com/v1/files/p3hwebne0q7s2-OTOMOTOPL/image;s=320x240",
     "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6Iiia4.html",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026?page=2#offer-0": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026?page=2#offer-0",
-    "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
-    "price": 144900,
-    "year": 2026,
-    "brand": "Mazda",
-    "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/cavjxcdf83s81-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6IiQFZ.html",
     "is_new": false,
     "price_history": []
   },
