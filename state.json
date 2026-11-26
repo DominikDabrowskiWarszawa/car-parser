@@ -104,23 +104,11 @@
     "model": "CX 5",
     "image": "https://ireland.apollo.olxcdn.com/v1/files/0hbehhgo9d9u1-OTOMOTOPL/image;s=320x240",
     "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6I1FP3.html",
-    "is_new": true,
+    "is_new": false,
     "price_history": []
   },
   "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-9": {
     "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-9",
-    "title": "Mazda CX-5",
-    "price": 180200,
-    "year": 2026,
-    "brand": "Mazda",
-    "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/ipwju9fguop73-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6HUGT6.html",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-10": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-10",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Prime-Line",
     "price": 146999,
     "year": 2026,
@@ -131,8 +119,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-11": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-11",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-10": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-10",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
     "price": 162600,
     "year": 2026,
@@ -143,8 +131,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-12": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-12",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-11": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-11",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
     "price": 162600,
     "year": 2026,
@@ -155,20 +143,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-13": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-13",
-    "title": "Mazda CX-5 2.5 e-SKYACTIV G Exclusive-Line",
-    "price": 171600,
-    "year": 2026,
-    "brand": "Mazda",
-    "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/9u4w6ojyx8i82-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6I7kG7.html",
-    "is_new": false,
-    "price_history": []
-  },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-14": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-14",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-12": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-12",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
     "price": 164200,
     "year": 2026,
@@ -179,8 +155,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-15": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-15",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-13": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-13",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
     "price": 159700,
     "year": 2026,
@@ -193,20 +169,32 @@
       163600
     ]
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-16": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-16",
-    "title": "Mazda CX-5 2.5 e-SKYACTIV G Homura",
-    "price": 182400,
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-14": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-14",
+    "title": "Mazda CX-5",
+    "price": 180200,
     "year": 2026,
     "brand": "Mazda",
     "model": "CX 5",
-    "image": "https://ireland.apollo.olxcdn.com/v1/files/82oi9bvb7psn2-OTOMOTOPL/image;s=320x240",
-    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6I9ctX.html",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/ipwju9fguop73-OTOMOTOPL/image;s=320x240",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6HUGT6.html",
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-17": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-17",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-15": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-15",
+    "title": "Mazda CX-5 2.5 e-SKYACTIV G Exclusive-Line",
+    "price": 171600,
+    "year": 2026,
+    "brand": "Mazda",
+    "model": "CX 5",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/9u4w6ojyx8i82-OTOMOTOPL/image;s=320x240",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6I7kG7.html",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-16": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-16",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line 4x4",
     "price": 172000,
     "year": 2026,
@@ -217,8 +205,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-18": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-18",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-17": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-17",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line",
     "price": 146900,
     "year": 2026,
@@ -229,8 +217,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-19": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-19",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-18": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-18",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line 4x4",
     "price": 156900,
     "year": 2026,
@@ -241,8 +229,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-20": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-20",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-19": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-19",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line 4x4",
     "price": 149500,
     "year": 2026,
@@ -253,8 +241,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-21": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-21",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-20": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-20",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Exclusive-Line",
     "price": 171000,
     "year": 2026,
@@ -265,8 +253,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-22": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-22",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-21": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-21",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Homura",
     "price": 175600,
     "year": 2026,
@@ -277,8 +265,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-23": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-23",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-22": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-22",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Center-Line 4x4",
     "price": 149900,
     "year": 2026,
@@ -289,8 +277,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-24": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-24",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-23": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-23",
     "title": "Mazda CX-5",
     "price": 170900,
     "year": 2026,
@@ -301,8 +289,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-25": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-25",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-24": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-24",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Exclusive-Line",
     "price": 172600,
     "year": 2026,
@@ -313,8 +301,8 @@
     "is_new": false,
     "price_history": []
   },
-  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-26": {
-    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-26",
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-25": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-25",
     "title": "Mazda CX-5 2.5 e-SKYACTIV G Homura",
     "price": 185000,
     "year": 2026,
@@ -322,6 +310,18 @@
     "model": "CX 5",
     "image": "https://ireland.apollo.olxcdn.com/v1/files/c4t802rm2n2f1-OTOMOTOPL/image;s=320x240",
     "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6Iavbf.html",
+    "is_new": false,
+    "price_history": []
+  },
+  "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-26": {
+    "url": "https://www.otomoto.pl/osobowe/mazda/cx-5/od-2026#offer-26",
+    "title": "Mazda CX-5 2.5 e-SKYACTIV G Homura",
+    "price": 182400,
+    "year": 2026,
+    "brand": "Mazda",
+    "model": "CX 5",
+    "image": "https://ireland.apollo.olxcdn.com/v1/files/82oi9bvb7psn2-OTOMOTOPL/image;s=320x240",
+    "source_offer_url": "https://www.otomoto.pl/osobowe/oferta/mazda-cx-5-ID6I9ctX.html",
     "is_new": false,
     "price_history": []
   },
